@@ -222,6 +222,8 @@ section {
     cursor: pointer;
 }
 
+
+
 /* Hero Slider */
 .hero-slider {
     position: relative;
@@ -829,15 +831,7 @@ section {
         width: 100%;
     }
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--primary-navy);
-    cursor: pointer;
-}
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
