@@ -158,3 +158,16 @@ function sendToTelegram(e) {
             statusDiv.style.color = "red";
         });
 }
+
+
+// Mobile Menu Logic
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const navBtn = document.querySelector('.nav-btn');
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navBtn.classList.toggle('active');
+    });
+}
