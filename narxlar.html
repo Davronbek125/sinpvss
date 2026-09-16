@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xizmatlar va narxlar - SINOV SERTIFIQAT SERVIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar"><div class="container top-bar-inner">
+            <div class="top-info"><span><i class="icon-clock"></i> Du-Ju: 09:00-17:00</span></div>
+        </div></div>
+        <nav class="main-nav"><div class="container nav-inner">
+            <div class="logo"><a href="index.html"><strong>SINOV SERTIFIQAT SERVIS</strong></a></div>
+            <ul class="nav-links">
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="sertifikatlashtirish.html">Sertifikatlashtirish</a></li>
+                    <li><a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a></li>
+                    <li><a href="narxlar.html" class="active">Xizmatlar va narxlar</a></li>
+                    <li><a href="hujjatlar.html">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                    <li><a href="index.html#footer">Aloqa</a></li>
+                </ul>
+        </div></nav>
+    </header>
+
+    <!-- Inner Page Header -->
+    <section class="hero-slider" style="height: 300px;">
+        <div class="slide active" style="height: 300px;">
+            <div class="slide-bg" style="background-color: var(--primary-navy);"></div>
+            <div class="container slide-content" style="text-align: center; top: 60%;">
+                <h1 style="font-size: 2.5rem;">XIZMATLAR VA NARXLAR</h1>
+                <p>Biz taklif etayotgan xizmatlar va ularning narxnomalari bilan tanishing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services and Prices -->
+    <section class="container" style="padding: 60px 0;">
+        <h2 class="section-title">Xizmat narxlari</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center; margin-top: 40px;">
+            
+            <!-- Service 1 -->
+            <div class="service-card" style="background: var(--bg-white); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; text-align: center; transition: transform 0.3s ease;">
+                <img src="img/uslug1.jpg" alt="Xizmatlar" style="width: 100%; height: 200px; object-fit: cover; cursor: zoom-in;" onclick="openLightbox(this.src)">
+                <div style="padding: 30px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Sertifikatlashtirish xizmatlari narxi (1)</h3>
+                    <a href="img/uslug1.jpg" download="Sertifikatlashtirish_narxi_1.jpg" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <span>&#128196;</span> Yuklab olish
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card" style="background: var(--bg-white); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; text-align: center; transition: transform 0.3s ease;">
+                <img src="img/uslug2.jpg" alt="Xizmatlar" style="width: 100%; height: 200px; object-fit: cover; cursor: zoom-in;" onclick="openLightbox(this.src)">
+                <div style="padding: 30px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Sertifikatlashtirish xizmatlari narxi (2)</h3>
+                    <a href="img/uslug2.jpg" download="Sertifikatlashtirish_narxi_2.jpg" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <span>&#128196;</span> Yuklab olish
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card" style="background: var(--bg-white); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; text-align: center; transition: transform 0.3s ease;">
+                <img src="img/uslug3.jpg" alt="Xizmatlar" style="width: 100%; height: 200px; object-fit: cover; cursor: zoom-in;" onclick="openLightbox(this.src)">
+                <div style="padding: 30px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Sertifikatlashtirish xizmatlari narxi (3)</h3>
+                    <a href="img/uslug3.jpg" download="Sertifikatlashtirish_narxi_3.jpg" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <span>&#128196;</span> Yuklab olish
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="bg-light" style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Bizning xodimlarimiz</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; justify-content: center; margin-top: 40px;">
+                
+                <!-- Member 1 -->
+                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
+                    <img src="img/women.jpg" alt="Madrimova Darmonjon" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Madrimova Darmonjon</h3>
+                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Bosh direktor</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
+                    <img src="img/men.jpg" alt="Madrimov Quvandik" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Madrimov Quvandik</h3>
+                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Sertifikatlashtirish organi rahbari</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
+                    <img src="img/men.jpg" alt="Mamajonov Javohir" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Mamajonov Javohir</h3>
+                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">SMT bo'yicha ekspert auditor</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
+                    <img src="img/men.jpg" alt="Madrimov Doniyor" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Madrimov Doniyor</h3>
+                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Bosh mutaxassis</p>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
+                    <img src="img/women.jpg" alt="Madrimova Darmonjon" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Madrimova Darmonjon</h3>
+                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Laboratoriya boshlig'i</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 sinovss.uz</p></div></footer>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
