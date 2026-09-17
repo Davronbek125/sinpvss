@@ -162,7 +162,7 @@ section {
 }
 
 .logo a {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--primary-navy);
     font-family: var(--font-heading);
@@ -172,7 +172,7 @@ section {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -182,7 +182,7 @@ section {
 .nav-links a {
     color: var(--text-primary);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     position: relative;
     white-space: nowrap;
 }
@@ -297,7 +297,7 @@ section {
 
 .hero-btns {
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .slider-btn {
@@ -442,7 +442,7 @@ section {
 
 .tab-content p {
     color: var(--text-secondary);
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     margin-bottom: 25px;
 }
 
@@ -564,7 +564,7 @@ section {
 .role {
     color: var(--accent-blue);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     margin-bottom: 10px;
 }
 
@@ -629,7 +629,7 @@ section {
 }
 
 .info-item h4 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     margin-bottom: 5px;
     color: var(--bg-white);
 }
@@ -687,7 +687,7 @@ section {
 .btn-block {
     display: block;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     padding: 15px;
     margin-top: 10px;
 }
