@@ -742,7 +742,10 @@ section {
     }
     .nav-inner {
         flex-wrap: wrap;
-        padding: 10px 15px;
+        padding: 5px 15px;
+    }
+    .logo img {
+        height: 50px !important;
     }
     .mobile-menu-btn {
         display: block;
