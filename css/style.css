@@ -66,7 +66,7 @@ ul {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -172,7 +172,7 @@ section {
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -181,8 +181,8 @@ section {
 
 .nav-links a {
     color: var(--text-primary);
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
     position: relative;
     white-space: nowrap;
 }
@@ -277,7 +277,7 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 600;
     color: rgba(255,255,255,0.9);
 }
 
@@ -297,7 +297,7 @@ section {
 
 .hero-btns {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 .slider-btn {
@@ -394,7 +394,7 @@ section {
 .stat-card p {
     color: var(--text-secondary);
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Tabs Section */
@@ -442,7 +442,7 @@ section {
 
 .tab-content p {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 25px;
 }
 
@@ -564,7 +564,7 @@ section {
 .role {
     color: var(--accent-blue);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
@@ -629,7 +629,7 @@ section {
 }
 
 .info-item h4 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 5px;
     color: var(--bg-white);
 }
@@ -662,7 +662,7 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
 }
 
@@ -687,7 +687,7 @@ section {
 .btn-block {
     display: block;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     padding: 15px;
     margin-top: 10px;
 }
