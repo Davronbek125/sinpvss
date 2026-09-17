@@ -777,6 +777,9 @@ section {
 }
 
 @media (max-width: 768px) {
+    .top-info {
+        display: none;
+    }
     .slide-content h1 {
         font-size: 2rem;
     }
