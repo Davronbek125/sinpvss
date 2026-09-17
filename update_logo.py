@@ -6,10 +6,10 @@ for filename in os.listdir('.'):
         with open(filename, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # Replace text logo with image logo for index.html links
+        # Replace img/logo.png with img/logo.jpg and height: 50px to 90px
         new_content = re.sub(
-            r'<div class="logo">\s*<a href="(index[^"]*\.html)">\s*<strong>SINOV SERTIFIQAT SERVIS</strong>\s*</a>\s*</div>',
-            r'<div class="logo">\n                    <a href="\1">\n                        <img src="img/logo.png" alt="SINOV SERTIFIQAT SERVIS" style="height: 50px;">\n                    </a>\n                </div>',
+            r'<img src="img/logo\.png" alt="SINOV SERTIFIQAT SERVIS" style="height: \d+px;">',
+            r'<img src="img/logo.jpg" alt="SINOV SERTIFIQAT SERVIS" style="height: 90px;">',
             content,
             flags=re.IGNORECASE
         )
