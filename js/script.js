@@ -34,10 +34,10 @@ function currentSlide(n) {
 
 function showSlide(n) {
     slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots) dots.forEach(dot => dot.classList.remove('active'));
     
     slides[n].classList.add('active');
-    dots[n].classList.add('active');
+    if (dots && dots[n]) dots[n].classList.add('active');
 }
 
 // Modal Placeholder
