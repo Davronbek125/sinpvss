@@ -167,7 +167,7 @@ const navBtn = document.querySelector('.nav-btn');
 
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        navBtn.classList.toggle('active');
+        if(navLinks) navLinks.classList.toggle('active');
+        if(navBtn) navBtn.classList.toggle('active');
     });
 }

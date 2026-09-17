@@ -784,7 +784,8 @@ section {
         display: none;
     }
     .slide-content h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
+        word-wrap: break-word;
     }
     .slide-content p {
         font-size: 1rem;
@@ -823,7 +824,8 @@ section {
 
 @media (max-width: 480px) {
     .slide-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem !important;
+        word-wrap: break-word;
     }
     .nav-links li {
         width: 100%;
