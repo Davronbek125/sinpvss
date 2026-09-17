@@ -36,7 +36,7 @@ Ushbu hujjatda `https://www.sinovss.uz/isp.html` saytining **«OOO Sinov Serttif
 
 Испытательная лаборатория (ИЛ) **ООО «SINOV SERTIFIQAT SERVIS»** оказывает услуги по испытаниям и по разработке нормативной документации строительных материалов и конструкций, изготовляемых на территории Узбекистана и завозимых из других стран. Система менеджмента качества ИЛ сертифицирована на соответствие требованиям международного стандарта **ISO 9001**. ИЛ аккредитован на техническую компетентность и независимость.
 
-**Аттестат аккредитации № UZ.AMT.07 MAI**
+**Аттестат аккредитации № O'ZAK.SL.0154**
 
 #### Мы предлагаем Вам услуги по различным видам испытаний следующих материалов и изделий:
 * **Стеновые:** кирпич, шлакоблоки, камни бетонные и керамические и др.
@@ -92,7 +92,7 @@ Laboratoriya rahbariyati e’lon qilingan sifat siyosati laboratoriyaning barcha
 
 **«SINOV SERTIFIQAT SERVIS» MChJ** Sinov laboratoriyasi (SL) O‘zbekiston hududida ishlab chiqarilayotgan hamda xorijiy davlatlardan olib kelinayotgan qurilish materiallari va konstruksiyalarini sinovdan o‘tkazish hamda me’yoriy hujjatlarini ishlab chiqish bo‘yicha xizmatlar ko‘rsatadi. Sinov laboratoriyasining sifat menejmenti tizimi xalqaro **ISO 9001** standarti talablariga muvofiq sertifikatlashtirilgan. Sinov laboratoriyasi texnik jihatdan mustaqillik va kompetentlik bo‘yicha akkreditatsiyadan o‘tgan.
 
-**Akkreditatsiya attestati № UZ.AMT.07 MAI**
+**Akkreditatsiya attestati № O'ZAK.SL.0154**
 
 #### Biz quyidagi material va buyumlarni turli sinovlardan o‘tkazish xizmatlarini taklif etamiz:
 * **Devorbop materiallar:** g‘isht, shlakobloklar, beton va keramika devor toshlari va b.

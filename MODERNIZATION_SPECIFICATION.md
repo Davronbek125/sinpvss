@@ -11,7 +11,7 @@ Ushbu hujjat **https://www.sinovss.uz** saytini **https://uztest.uz** andozasida
 * **Asosiy vazifa:** 
   1. Hozirgi `sinovss.uz`ning eskirgan shakli (dizayni)ni `uztest.uz` kabi zamonaviy, nufuzli davlat va xalqaro andozalarga mos shaklga o‘tkazish.
   2. Ranglar gammasini eskirgan qizil/ko‘kdan zamonaviy korporativ to‘q ko‘k (Navy Blue) va oqqa o‘zgartirish.
-  3. Xodimlar qismida faqat haqiqiy xodim: **Аллекова С.К — Директор** ma’lumotini rasmiy shaklda joylashtirish.
+  3. Xodimlar qismida faqat haqiqiy xodim: **Д.Я. Мадримова — Директор** ma’lumotini rasmiy shaklda joylashtirish.
   4. Qolgan barcha ma’lumotlar, akkreditatsiyalar, mahsulotlar va rekvizitlarni to‘liq saqlash.
 
 ---
@@ -22,11 +22,11 @@ Ushbu hujjat **https://www.sinovss.uz** saytini **https://uztest.uz** andozasida
 | :--- | :--- | :--- |
 | **Dizayn, shakl va bloklar** | `https://uztest.uz` | Split-ekranli slayder, statistika hisoblagichlari, interaktiv tablar, nufuzli Header/Footer |
 | **Ranglar palitrasi** | `uztest.uz` andozasida | `#003399` (To‘q ko‘k), `#0077CC` (Moviy), `#FFFFFF` (Oq), `#F4F7FA` (Yumshoq fon) |
-| **Xizmatlar va Akkreditatsiya** | `https://www.sinovss.uz` | № UZ.AMT.06.MAI (Sertifikatlashtirish), № UZ.AMT.07 MAI (Laboratoriya) |
+| **Xizmatlar va Akkreditatsiya** | `https://www.sinovss.uz` | № O'ZAK.MS.0029 (Sertifikatlashtirish), № O'ZAK.SL.0154 (Laboratoriya) |
 | **Mahsulotlar katalogi** | `https://www.sinovss.uz/cert.html` | G‘isht, beton, quruq qorishmalar, shag‘al, qum, marmar, temir-beton konstruksiyalar |
 | **Hujjatlar va fayllar** | `https://www.sinovss.uz/` | `zayavka.pdf`, `jalob.docx`, `2-УТВЕРЖДАЮ.docx`, `sxema.jpg`, `akk.jpg` |
-| **Jamoa / Xodimlar** | `https://www.sinovss.uz/` | Faqat: **Аллекова С.К — Директор** (rasmi: `img/women.jpg`) |
-| **Tashkilot rekvizitlari** | `https://www.sinovss.uz/` | Xorazm viloyati, Tuproqqal’a tumani, Xalqlar do‘stligi ko‘chasi, 10/3-uy. Tel: `+998 93 288 22 71` |
+| **Jamoa / Xodimlar** | `https://www.sinovss.uz/` | Faqat: **Д.Я. Мадримова — Директор** (rasmi: `img/women.jpg`) |
+| **Tashkilot rekvizitlari** | `https://www.sinovss.uz/` | Xorazm viloyati, Tuproqqal’a tumani, Xalqlar do‘stligi ko‘chasi, 10/3-uy. Tel: `+998 88 100 28 69, +998 99 335 07 70` |
 
 ---
 
@@ -75,7 +75,7 @@ Ushbu hujjat **https://www.sinovss.uz** saytini **https://uztest.uz** andozasida
 ### 5.1. Header (Yuqori qism — UzTest andozasida)
 1. **Top-bar (Kichik yuqori qator):**
    * Ish vaqti: `Dushanba - Juma: 09:00 - 17:00 | Shanba: 09:00 - 14:00`
-   * Telefon: `+998 (93) 288 22 71`
+   * Telefon: `+998 88 100 28 69, +998 99 335 07 70`
    * Email: `info@sinovss.uz`
    * Til tanlash: `[UZ] [RU]`
 2. **Asosiy Navigatsiya paneli:**
@@ -95,12 +95,12 @@ Ushbu hujjat **https://www.sinovss.uz** saytini **https://uztest.uz** andozasida
 
 #### 1-Blok: Hero Slider (Katta asosiy slayder)
 * **1-slayd:**
-  * Kichik sarlavha: `AKKREDITATSIYALANGAN SINOV LABORATORIYASI (UZ.AMT.07 MAI)`
+  * Kichik sarlavha: `AKKREDITATSIYALANGAN SINOV LABORATORIYASI (O'ZAK.SL.0154)`
   * Asosiy sarlavha: **Qurilish materiallari va konstruksiyalarini sifatli sinovdan o‘tkazish**
   * Tavsif: O‘zbekistonda ishlab chiqarilayotgan va chetdan keltirilayotgan qurilish materiallarining xavfsizlik va sifat standartlariga muvofiqligini sinash.
   * Tugmalar: `[Ariza topshirish]` (ko‘k fon) va `[Laboratoriya haqida]` (shaffof hoshiyali).
 * **2-slayd:**
-  * Kichik sarlavha: `SERTIFIKATLASHTIRISH ORGANI (UZ.AMT.06.MAI)`
+  * Kichik sarlavha: `SERTIFIKATLASHTIRISH ORGANI (O'ZAK.MS.0029)`
   * Asosiy sarlavha: **Qurilish mahsulotlarini milliy tizimda sertifikatlash**
   * Tavsif: Mahsulot partiyalariga va seriyali ishlab chiqarishga muvofiqlik sertifikatlarini rasmiylashtirish.
   * Tugmalar: `[Sertifikatlash sxemalari]` va `[Arizani yuklab olish]`.
@@ -127,7 +127,7 @@ Ushbu hujjat **https://www.sinovss.uz** saytini **https://uztest.uz** andozasida
 
 #### 5-Blok: Rahbariyat / Xodimlar (Team Showcase)
 * Foydalanuvchi ko‘rsatmasi bo‘yicha **faqat mavjud xodim**:
-  * **F.I.Sh:** Аллекова С.К
+  * **F.I.Sh:** Д.Я. Мадримова
   * **Lavozimi:** Директор
   * **Fotosurat:** `img/women.jpg` (zamonaviy neytral fonli ramkada)
   * **Kompaniya:** ООО «SINOV SERTIFIQAT SERVIS»
@@ -187,6 +187,6 @@ Sayt shakllari to‘ldirilganda ma’lumotlar quyidagi parametrlar asosida Teleg
    * `price.html` -> `/narxlar/`
    * Barcha sahifalardagi yuklab olinuvchi PDF/Word fayllar havolalarini yangi joylashuvga to‘g‘rilash.
 6. **Xodimlar tekshiruvi:**
-   * Faqat «Аллекова С.К — Директор» kartasi mavjudligini tasdiqlash.
+   * Faqat «Д.Я. Мадримова — Директор» kartasi mavjudligini tasdiqlash.
 7. **Sinov:**
    * Smartfon ekranida (375px - 430px) qulaylikni tekshirish, arizani Telegramga yuborib test qilish.
