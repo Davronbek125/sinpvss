@@ -116,12 +116,12 @@
         <div class="container text-center">
             <h2 class="section-title">Видео процесса работы лаборатории</h2>
             <div style="display: flex; justify-content: center; width: 100%; flex-wrap: wrap; gap: 20px;">
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/toDtqobh2lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/Z-KCw7MdvYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/udD3_SyWYlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/iofQvDdzgMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/DBBsaZP9X7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/qtjn8gHC-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/toDtqobh2lc?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/Z-KCw7MdvYo?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/udD3_SyWYlw?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/iofQvDdzgMA?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/DBBsaZP9X7M?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/qtjn8gHC-wg?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
             </div>
         </div>
     </section>
@@ -194,5 +194,37 @@
     <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 sinovss.uz. Все права защищены.</p></div></footer>
 
     <script src="js/script.js"></script>
+
+<!-- YouTube IFrame API to pause other videos when one is played -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var players = [];
+    
+    // This function is called automatically by YouTube IFrame API
+    function onYouTubeIframeAPIReady() {
+        var iframes = document.querySelectorAll('.yt-video');
+        iframes.forEach(function(iframe, index) {
+            var player = new YT.Player(iframe, {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            var current_player = event.target;
+            // Pause all other players
+            players.forEach(function(player) {
+                if (player !== current_player && typeof player.pauseVideo === 'function') {
+                    player.pauseVideo();
+                }
+            });
+        }
+    }
+</script>
 </body>
+
 </html>
