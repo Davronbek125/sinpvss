@@ -40,9 +40,13 @@ function showSlide(n) {
     if (dots && dots[n]) dots[n].classList.add('active');
 }
 
-// Modal Placeholder
+// Modal / Contact Form Redirection
 function openModal() {
-    window.location.href = "index.html#contact-form";
+    if (window.location.pathname.includes('_ru')) {
+        window.location.href = "index_ru.html#contact-form";
+    } else {
+        window.location.href = "index.html#contact-form";
+    }
 }
 
 // Stats Counter Animation
@@ -92,24 +96,31 @@ function openTab(evt, tabName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    const targetTab = document.getElementById(tabName);
+    if (targetTab) {
+        targetTab.style.display = "block";
+    }
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.className += " active";
+    }
 }
 
 // Lightbox Logic
 function openLightbox(imageSrc) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    
-    // Check if the image source exists (for placeholder sake, we will just show the modal)
-    // In a real scenario, this would load the actual image.
-    lightbox.style.display = "block";
-    lightboxImg.src = imageSrc;
-    lightboxImg.alt = "Akkreditatsiya hujjati";
+    if (lightbox && lightboxImg) {
+        lightbox.style.display = "block";
+        lightboxImg.src = imageSrc;
+        lightboxImg.alt = "Hujjat rasmi";
+    }
 }
 
 function closeLightbox() {
-    document.getElementById('lightbox').style.display = "none";
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.style.display = "none";
+    }
 }
 
 // Telegram Integration
@@ -120,22 +131,31 @@ function sendToTelegram(e) {
     const botToken = '<BOT_TOKEN>';
     const chatId = '<CHAT_ID>';
     
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value;
+    const nameEl = document.getElementById('name');
+    const phoneEl = document.getElementById('phone');
+    const serviceEl = document.getElementById('service');
+    const messageEl = document.getElementById('message');
+    const statusDiv = document.getElementById('formStatus');
+    
+    const name = nameEl ? nameEl.value : '';
+    const phone = phoneEl ? phoneEl.value : '';
+    const service = serviceEl ? serviceEl.value : '';
+    const message = messageEl ? messageEl.value : '';
     
     const currentTime = new Date().toLocaleString();
     
     const text = `🔔 YANGI ARIZA (sinovss.uz):\n━━━━━━━━━━━━━━━━━━━━\n👤 Buyurtmachi: ${name}\n📞 Telefon: ${phone}\n🏗 Xizmat turi: ${service}\n📝 Izoh: ${message}\n📅 Vaqt: ${currentTime}`;
     
-    const statusDiv = document.getElementById('formStatus');
-    statusDiv.innerHTML = "Yuborilmoqda...";
-    statusDiv.style.color = "var(--primary-navy)";
+    if (statusDiv) {
+        statusDiv.innerHTML = "Yuborilmoqda...";
+        statusDiv.style.color = "var(--primary-navy)";
+    }
     
     if(botToken === '<BOT_TOKEN>') {
-        statusDiv.innerHTML = "Xatolik: Telegram bot ulanganicha yo'q. (Placeholder o'zgartirilmagan)";
-        statusDiv.style.color = "red";
+        if (statusDiv) {
+            statusDiv.innerHTML = "Xatolik: Telegram bot ulanganicha yo'q. (Placeholder o'zgartirilmagan)";
+            statusDiv.style.color = "red";
+        }
         return;
     }
 
@@ -144,18 +164,25 @@ function sendToTelegram(e) {
     fetch(url)
         .then(response => {
             if(response.ok) {
-                statusDiv.innerHTML = "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.";
-                statusDiv.style.color = "green";
-                document.getElementById('tgForm').reset();
+                if (statusDiv) {
+                    statusDiv.innerHTML = "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.";
+                    statusDiv.style.color = "green";
+                }
+                const form = document.getElementById('tgForm');
+                if (form) form.reset();
             } else {
-                statusDiv.innerHTML = "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.";
-                statusDiv.style.color = "red";
+                if (statusDiv) {
+                    statusDiv.innerHTML = "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.";
+                    statusDiv.style.color = "red";
+                }
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            statusDiv.innerHTML = "Xatolik yuz berdi. Internet ulanishini tekshiring.";
-            statusDiv.style.color = "red";
+            if (statusDiv) {
+                statusDiv.innerHTML = "Xatolik yuz berdi. Internet ulanishini tekshiring.";
+                statusDiv.style.color = "red";
+            }
         });
 }
 
@@ -169,5 +196,62 @@ if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
         if(navLinks) navLinks.classList.toggle('active');
         if(navBtn) navBtn.classList.toggle('active');
+    });
+}
+
+
+
+
+
+// Smart Sticky Nav Logic
+let lastScrollTop = 0;
+const nav = document.querySelector('.main-nav');
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    if (!nav) return;
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Height of the white header (approx 140px)
+    let headerHeight = header ? header.offsetHeight : 140;
+
+    if (scrollTop > headerHeight) {
+        // Fix the nav to the top of the window
+        nav.classList.add('fixed-nav');
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down -> hide nav
+            nav.classList.add('hide-nav');
+        } else {
+            // Scrolling up -> show nav
+            nav.classList.remove('hide-nav');
+        }
+    } else {
+        // At the very top -> normal flow, visible
+        nav.classList.remove('fixed-nav');
+        nav.classList.remove('hide-nav');
+        document.body.style.paddingTop = '0px';
+    }
+    lastScrollTop = scrollTop;
+});
+
+// Scroll Animations (Fade-Up)
+const faders = document.querySelectorAll('.fade-up');
+if (faders.length > 0) {
+    const appearOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
     });
 }

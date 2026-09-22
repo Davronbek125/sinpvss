@@ -4,40 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinov laboratoriyasi - SINOV SERTIFIQAT SERVIS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="top-bar"><div class="container top-bar-inner">
-            <div class="top-info">
-                    <span><i class="icon-clock"></i> Dushanba - Juma: 09:00 - 17:00 | Shanba: 09:00 - 14:00</span>
-                    <span><i class="icon-phone"></i> +998 88 100 28 69, +998 99 335 07 70</span>
-                    <span><i class="icon-email"></i> info@sinovss.uz</span>
+    <!-- Header: Top-bar va Navigatsiya (Turonss style) -->
+    <header class="header" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="background: #f8f9fa; padding: 15px 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo" style="height: 80px;"></a>
                 </div>
-                <div class="top-lang">
-                    <a href="sinov-laboratoriyasi.html" class="active">UZ</a> | <a href="sinov-laboratoriyasi_ru.html">RU</a>
+                <div style="text-align: right; font-size: 0.95rem; color: #333;">
+                    <div class="top-lang" style="margin-bottom: 10px; font-weight: bold;">
+                        <a href="sinov-laboratoriyasi.html" class="active" style="color: #0245cc;">UZ</a> | <a href="sinov-laboratoriyasi_ru.html" style="color: #333;">RU</a>
+                    </div>
+                    <div style="margin-bottom: 5px;"><i class="icon-phone"></i> Tel: +998 88 100 28 69</div>
+                    <div><i class="icon-email"></i> Email: info@sinovss.uz</div>
                 </div>
-        </div></div>
-        <nav class="main-nav"><div class="container nav-inner">
-            <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.jpg" alt="SINOV SERTIFIQAT SERVIS" style="height: 90px;">
-                    </a>
-                </div>
-                <button class="mobile-menu-btn">&#9776;</button>
-            <ul class="nav-links">
-                    <li><a href="index.html">Bosh sahifa</a></li>
-                    <li><a href="sertifikatlashtirish.html">Sertifikatlashtirish</a></li>
-                    <li><a href="sinov-laboratoriyasi.html" class="active">Sinov laboratoriyasi</a></li>
-                    <li><a href="narxlar.html">Xizmatlar va narxlar</a></li>
-                    <li><a href="hujjatlar.html">Hujjatlar va Ochiq ma'lumotlar</a></li>
-                    <li><a href="index.html#footer">Aloqa</a></li>
+            </div>
+        </div>
+        <nav class="main-nav" style="background-color: #0245cc; padding: 0;">
+            <div class="container nav-inner" style="display: flex; justify-content: center;">
+                <button class="mobile-menu-btn" style="color: white; border: none; background: transparent; font-size: 1.5rem; display: none;">&#9776;</button>
+                <ul class="nav-links" style="display: flex; gap: 20px; padding: 15px 0; margin: 0; list-style: none; flex-wrap: wrap; justify-content: center;">
+                    <li><a href="index.html" style="color: white; font-weight: 600; text-transform: uppercase;">Bosh sahifa</a></li>
+                    <li class="dropdown">
+                    <a href="sertifikatlashtirish.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sertifikatlashtirish</a>
+                    <div class="dropdown-content">
+                        <a href="sertifikatlashtirish.html">Sertifikatlashtirish</a>
+                        <a href="sertifikat-tuzilma.html">Sertifikatlashtirish organi tuzilishi</a>
+                        <a href="akkreditatsiya-hujjatlari.html">Akkreditatsiya hujjatlari</a>
+                    </div>
+                </li>
+                    <li class="dropdown">
+                    <a href="sinov-laboratoriyasi.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sinov laboratoriyasi</a>
+                    <div class="dropdown-content">
+                        <a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a>
+                        <a href="lab-hujjatlar.html">Hujjatlar</a>
+                        <a href="lab-lavhalar.html">Ish jarayonidan lavhalar</a>
+                    </div>
+                </li>
+                    <li><a href="narxlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                    <li><a href="index.html#contact-form" style="color: white; font-weight: 600; text-transform: uppercase;">Aloqa</a></li>
                 </ul>
-        </div></nav>
+            </div>
+        </nav>
     </header>
-
     <!-- Inner Page Header -->
     <section class="hero-slider" style="height: 300px;">
         <div class="slide active" style="height: 300px;">
@@ -48,96 +63,76 @@
             </div>
         </div>
     </section>
-
-    <!-- Lab Content -->
+        <!-- Lab Content -->
     <section class="container" style="padding: 60px 0;">
-        <div style="background: var(--bg-white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
-            <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Biz haqimizda</h2>
-            <p style="margin-bottom: 15px; font-size: 1.05rem;"><strong>«SINOV SERTIFIQAT SERVIS» MChJ</strong> ning sinov laboratoriyasi O‘zbekiston hududida ishlab chiqariladigan va chetdan keltiriladigan qurilish materiallari va konstruksiyalarini sinovdan o‘tkazish hamda ularga normativ hujjatlar ishlab chiqish bo‘yicha xizmatlar ko‘rsatadi.</p>
-            <p style="margin-bottom: 15px; font-size: 1.05rem;">Laboratoriyaning sifat menejmenti tizimi <strong>ISO 9001</strong> xalqaro standartiga muvofiq sertifikatlangan bo'lib, texnik malaka va mustaqillik bo'yicha davlat akkreditatsiyasidan o'tgan.</p>
-            <h4 style="color: var(--primary-navy); margin: 20px 0 30px; font-size: 1.2rem;">Akkreditatsiya guvohnomasi № O'ZAK.SL.0154</h4>
+        <div style="background: var(--bg-white); padding: 50px 60px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 40px;">
+            <h4 style="color: var(--primary-navy); margin: 0 0 30px 0; font-size: 1.3rem; border-left: 5px solid var(--accent-blue); padding-left: 15px;">Akkreditatsiya guvohnomasi № O'ZAK.SL.0154</h4>
             
-            <h3 style="margin: 30px 0 15px;">Quyidagi materiallar va mahsulotlarning turli xil sinovlarini taklif etamiz:</h3>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.05rem;">
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Devorbop:</strong> g'isht, shlakobloklar, beton va keramik toshlar va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Bog'lovchilar:</strong> sementlar va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Olovga chidamli mahsulotlar</strong></li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Tom yopish:</strong> shifer, cherepitsa va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Pardozlash va qoplash:</strong> keramik plitka, gipsokarton, osma gips plitalar va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Noorganik to'ldirgichlar:</strong> shag'al, qum, chaqiq tosh va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Yo'l materiallari:</strong> beton, tosh, asfaltbeton va boshqalar.</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Bosimsiz temir-beton quvurlar</strong></li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Beton va temir-beton konstruksiyalar va qismlar, beton, qorishmalar</strong></li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> <strong>Tabiiy toshdan tayyorlangan mahsulotlar:</strong> marmar, granit va boshqalar.</li>
+            <h3 style="margin: 0 0 25px 0; font-size: 1.6rem; color: var(--primary-navy);">Quyidagi materiallar va mahsulotlarning turli xil sinovlarini taklif etamiz:</h3>
+            <ul style="list-style: none; padding-left: 15px; line-height: 2.2; font-size: 1.25rem; margin-bottom: 40px; color: #333;">
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Devorbop:</strong> g'isht, shlakobloklar, beton va keramik toshlar va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Bog'lovchilar:</strong> sementlar va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Olovga chidamli mahsulotlar</strong></li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Tom yopish:</strong> shifer, cherepitsa va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Pardozlash va qoplash:</strong> keramik plitka, gipsokarton, osma gips plitalar va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Noorganik to'ldirgichlar:</strong> shag'al, qum, chaqiq tosh va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Yo'l materiallari:</strong> beton, tosh, asfaltbeton va boshqalar.</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Bosimsiz temir-beton quvurlar</strong></li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Beton va temir-beton konstruksiyalar va qismlar, beton, qorishmalar</strong></li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> <strong>Tabiiy toshdan tayyorlangan mahsulotlar:</strong> marmar, granit va boshqalar.</li>
             </ul>
 
-            <h3 style="margin: 30px 0 15px;">Standartlashtirish bo'yicha qo'shimcha xizmatlar:</h3>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.05rem; margin-bottom: 30px;">
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> O'zDSt (Davlat standartlari) ni ishlab chiqish;</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> TS (Texnik shartlar) ni ishlab chiqish;</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Texnologik yo'riqnomalarni ishlab chiqish;</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Uslubiy va amaliy yordam ko'rsatish.</li>
+            <h3 style="margin: 40px 0 25px 0; font-size: 1.6rem; color: var(--primary-navy);">Standartlashtirish bo'yicha qo'shimcha xizmatlar:</h3>
+            <ul style="list-style: none; padding-left: 15px; line-height: 2.2; font-size: 1.25rem; margin-bottom: 20px; color: #333;">
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> O'zDSt (Davlat standartlari) ni ishlab chiqish;</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> TS (Texnik shartlar) ni ishlab chiqish;</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> Texnologik yo'riqnomalarni ishlab chiqish;</li>
+                <li><i style="color: var(--accent-blue); margin-right: 15px; font-weight: bold; font-style: normal;">&mdash;</i> Uslubiy va amaliy yordam ko'rsatish.</li>
             </ul>
+        </div>
 
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+<!-- Certificates and Docs -->
+        <div style="display: flex; flex-direction: column; gap: 60px; align-items: center; margin-top: 60px;">
             
-            <div style="text-align: center;">
-                <h3 style="margin-bottom: 20px;">Mijozlar murojaati va Hujjatlar</h3>
-                <a href="docs/jalob.docx" class="btn btn-primary" style="background-color: var(--primary-navy); padding: 12px 30px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; margin: 10px;">
-                    <span style="font-size: 1.2rem;">&#128196;</span> Da'vo va shikoyatlarni ko'rib chiqish (Yuklab olish)
+            <!-- Guvohnoma Image -->
+            <div style="text-align: center; width: 100%; max-width: 1100px;">
+                <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--primary-navy);">Laboratoriya Akkreditatsiya Guvohnomasi</h3>
+                <img src="img/guvohnomauz.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer;" alt="Guvohnoma" onclick="openLightbox('img/guvohnomauz.jpg')">
+            </div>
+
+            <!-- Shikoyat -->
+            <div style="text-align: center; width: 100%; max-width: 1100px; padding-top: 30px; border-top: 1px solid #eaeaea;">
+                <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--primary-navy);">Mijozlar Murojaati</h3>
+                <a href="docs/jalob.docx" class="btn btn-primary" style="background-color: var(--primary-navy); padding: 15px 40px; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 10px; border-radius: 8px;">
+                    <span style="font-size: 1.3rem;">&#128196;</span> Da'vo va shikoyatlarni ko'rib chiqish (Yuklab olish - DOCX)
                 </a>
-                <a href="docs/область ИЛ 2026.pdf" target="_blank" class="btn btn-primary" style="background-color: var(--primary-navy); padding: 12px 30px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; margin: 10px;">
-                    <span style="font-size: 1.2rem;">&#128196;</span> Akkreditatsiya sohasi (PDF)
+            </div>
+
+            <!-- Akkreditatsiya sohasi -->
+            <div style="text-align: center; width: 100%; max-width: 1100px; padding-top: 30px; border-top: 1px solid #eaeaea;">
+                <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--primary-navy);">Akkreditatsiya Sohasi</h3>
+                <div style="width: 100%; height: 1100px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; background: #fff;">
+                    <iframe src="docs/область ИЛ 2026.pdf#toolbar=0" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+                <br>
+                <a href="docs/область ИЛ 2026.pdf" target="_blank" class="btn btn-primary" style="background-color: var(--primary-navy); margin-top: 20px; padding: 15px 40px; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 10px; border-radius: 8px;">
+                    <span style="font-size: 1.3rem;">&#128196;</span> PDF faylini yuklab olish
                 </a>
             </div>
+            
         </div>
-    </section>
-<!-- Lab & Accreditation Gallery -->
-    <section class="bg-light" style="padding: 60px 0;">
-        <div class="container">
-            <h2 class="section-title">Laboratoriya va Guvohnomalar</h2>
-            <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/lab1.jpg')"><img src="img/lab1.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/lab2.jpg')"><img src="img/lab2.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/lab3.jpg')"><img src="img/lab3.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/lab4.jpg')"><img src="img/lab4.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/akk.jpg')"><img src="img/akk.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/guvohnoma.jpg')"><img src="img/guvohnoma.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/guvohnomauz.jpg')"><img src="img/guvohnomauz.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-                <div class="gallery-item" style="height: 250px; overflow: hidden; border-radius: 8px; cursor:pointer;" onclick="openLightbox('img/sxem.jpg')"><img src="img/sxem.jpg" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-            </div>
-        </div>
-    </section>
-
     
-    <!-- Video Section -->
-    <section style="padding: 40px 0; background: var(--bg-white);">
-        <div class="container text-center">
-            <h2 class="section-title">Laboratoriya jarayonidan lavha</h2>
-            <div style="display: flex; justify-content: center; width: 100%; flex-wrap: wrap; gap: 20px;">
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/toDtqobh2lc?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/Z-KCw7MdvYo?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/udD3_SyWYlw?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/iofQvDdzgMA?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/DBBsaZP9X7M?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/qtjn8gHC-wg?enablejsapi=1" class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 100%;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Lightbox Modal for Inner Page -->
+        
+        </section>
+<!-- Lightbox Modal for Inner Page -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
-
     <!-- Team Section -->
     <section style="padding: 80px 0;">
         <div class="container">
-            <h2 class="section-title">Bizning mutaxassislar</h2>
+            <h2 class="section-title fade-up">Bizning mutaxassislar</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
                 <!-- Member 1 -->
                 <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
@@ -191,15 +186,42 @@
         </div>
     </section>
 
-    <footer class="footer"><div class="footer-bottom"><p>&copy; 2026 sinovss.uz</p></div></footer>
-
-    <script src="js/script.js"></script>
-
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h3>SINOV SERTIFIQAT SERVIS</h3>
+                <p>Qurilish materiallari va konstruksiyalarini ishonchli sinovdan o‘tkazish hamda sertifikatlash.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Havolalar</h3>
+                <ul>
+                    <li><a href="sertifikatlashtirish.html">Sertifikatlashtirish</a></li>
+                    <li><a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a></li>
+                    <li><a href="narxlar.html">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Litsenziyalar</h3>
+                <p>O'ZAK.MS.0029</p>
+                <p>O'ZAK.SL.0154</p>
+            </div>
+            <div class="footer-col">
+                <h3>Ish vaqti</h3>
+                <p>Du - Ju: 09:00 - 17:00</p>
+                <p>Shanba: 09:00 - 14:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 sinovss.uz. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+    <script src="js/script.js?v=15"></script>
 <!-- YouTube IFrame API to pause other videos when one is played -->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
     var players = [];
-    
     // This function is called automatically by YouTube IFrame API
     function onYouTubeIframeAPIReady() {
         var iframes = document.querySelectorAll('.yt-video');
@@ -212,7 +234,6 @@
             players.push(player);
         });
     }
-
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING) {
             var current_player = event.target;
@@ -226,5 +247,4 @@
     }
 </script>
 </body>
-
 </html>

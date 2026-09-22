@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sertifikatlashtirish - SINOV SERTIFIQAT SERVIS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
     <!-- Header: Top-bar va Navigatsiya -->
-    <header class="header">
-        <div class="top-bar">
-            <div class="container top-bar-inner">
-                <div class="top-info">
-                    <span><i class="icon-clock"></i> Dushanba - Juma: 09:00 - 17:00 | Shanba: 09:00 - 14:00</span>
-                    <span><i class="icon-phone"></i> +998 88 100 28 69, +998 99 335 07 70</span>
-                    <span><i class="icon-email"></i> info@sinovss.uz</span>
+    <!-- Header: Top-bar va Navigatsiya (Turonss style) -->
+    <header class="header" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="background: #f8f9fa; padding: 15px 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo" style="height: 80px;"></a>
                 </div>
-                <div class="top-lang">
-                    <a href="sertifikatlashtirish.html" class="active">UZ</a> | <a href="sertifikatlashtirish_ru.html">RU</a>
+                <div style="text-align: right; font-size: 0.95rem; color: #333;">
+                    <div class="top-lang" style="margin-bottom: 10px; font-weight: bold;">
+                        <a href="sertifikatlashtirish.html" class="active" style="color: #0245cc;">UZ</a> | <a href="sertifikatlashtirish_ru.html" style="color: #333;">RU</a>
+                    </div>
+                    <div style="margin-bottom: 5px;"><i class="icon-phone"></i> Tel: +998 88 100 28 69</div>
+                    <div><i class="icon-email"></i> Email: info@sinovss.uz</div>
                 </div>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="container nav-inner">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.jpg" alt="SINOV SERTIFIQAT SERVIS" style="height: 90px;">
-                    </a>
-                </div>
-                <button class="mobile-menu-btn">&#9776;</button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Bosh sahifa</a></li>
-                    <li><a href="sertifikatlashtirish.html" class="active">Sertifikatlashtirish</a></li>
-                    <li><a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a></li>
-                    <li><a href="narxlar.html">Xizmatlar va narxlar</a></li>
-                    <li><a href="hujjatlar.html">Hujjatlar va Ochiq ma'lumotlar</a></li>
-                    <li><a href="index.html#footer">Aloqa</a></li>
+        <nav class="main-nav" style="background-color: #0245cc; padding: 0;">
+            <div class="container nav-inner" style="display: flex; justify-content: center;">
+                <button class="mobile-menu-btn" style="color: white; border: none; background: transparent; font-size: 1.5rem; display: none;">&#9776;</button>
+                <ul class="nav-links" style="display: flex; gap: 20px; padding: 15px 0; margin: 0; list-style: none; flex-wrap: wrap; justify-content: center;">
+                    <li><a href="index.html" style="color: white; font-weight: 600; text-transform: uppercase;">Bosh sahifa</a></li>
+                    <li class="dropdown">
+                    <a href="sertifikatlashtirish.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sertifikatlashtirish</a>
+                    <div class="dropdown-content">
+                        <a href="sertifikatlashtirish.html">Sertifikatlashtirish</a>
+                        <a href="sertifikat-tuzilma.html">Sertifikatlashtirish organi tuzilishi</a>
+                        <a href="akkreditatsiya-hujjatlari.html">Akkreditatsiya hujjatlari</a>
+                    </div>
+                </li>
+                    <li class="dropdown">
+                    <a href="sinov-laboratoriyasi.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sinov laboratoriyasi</a>
+                    <div class="dropdown-content">
+                        <a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a>
+                        <a href="lab-hujjatlar.html">Hujjatlar</a>
+                        <a href="lab-lavhalar.html">Ish jarayonidan lavhalar</a>
+                    </div>
+                </li>
+                    <li><a href="narxlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                    <li><a href="index.html#contact-form" style="color: white; font-weight: 600; text-transform: uppercase;">Aloqa</a></li>
                 </ul>
-                <div class="nav-btn">
-                    <button class="btn btn-primary" onclick="openModal()">Ariza qoldirish</button>
-                </div>
             </div>
         </nav>
     </header>
-
     <!-- Inner Page Header -->
     <section class="hero-slider" style="height: 300px;">
         <div class="slide active" style="height: 300px;">
@@ -55,15 +63,12 @@
             </div>
         </div>
     </section>
-
     <!-- Certification Content -->
     <section class="container" style="padding: 60px 0;">
         <div style="background: var(--bg-white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
-            <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Sertifikatlashtirish</h2>
+            <h2 class="section-title fade-up" style="text-align: left; margin-bottom: 20px;">Sertifikatlashtirish</h2>
             <p style="margin-bottom: 15px; font-size: 1.05rem;"><strong>«SINOV SERTIFIQAT SERVIS» MChJ</strong> O'zbekiston Respublikasida qurilish materiallari sohasidagi eng yaxshi sertifikatlashtirish idoralaridan biri hisoblanadi va sizga quyidagi xizmatlarni taklif qilishdan mamnun:</p>
-            
             <h4 style="color: var(--primary-navy); margin: 20px 0 20px; font-size: 1.2rem;">Akkreditatsiya guvohnomasi № O'ZAK.MS.0029</h4>
-
             <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.05rem; margin-bottom: 30px;">
                 <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> O'zbekistonda ishlab chiqarilgan (yoki import qilingan) mahsulotlarni Milliy sertifikatlashtirish tizimida nazarda tutilgan barcha sxemalar bo'yicha sertifikatlashtirish;</li>
                 <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Mahsulot partiyalarini sertifikatlashtirish, sinov bayonnomasi va partiyani sotish muddatiga muvofiqlik sertifikatini berish;</li>
@@ -73,114 +78,54 @@
                 <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Sertifikatlashtirish hujjatlarini ekspertizadan o'tkazish;</li>
                 <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Mijozlarimiz uchun mahsulotlarni sertifikatlashtirish, standartlashtirish, metrologiya va sinovdan o'tkazish sohalarida bepul maslahatlar berish.</li>
             </ul>
-
             <p style="margin-bottom: 15px; font-size: 1.05rem;"><strong>«SINOV SERTIFIQAT SERVIS» MChJ</strong> qurilish materiallari va konstruksiyalarini sertifikatlashtirish bilan bog'liq barcha muammolarni tez va samarali hal qilishda yordam beradigan barcha kerakli vositalarga ega.</p>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="docs/zayavka.pdf" class="btn btn-primary" style="background-color: var(--primary-navy); padding: 12px 30px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.2rem;">&#128196;</span> Arizani yuklab olish
+            <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #eaeaea;">
+                <h3 style="margin-bottom: 25px; color: var(--primary-navy);">Sertifikatlashtirish uchun ariza namunasi</h3>
+                <div style="display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; margin-bottom: 25px; border: 1px solid #ddd;">
+                    <img src="docs/zayavka_page-0001.jpg" style="width: 100%; max-width: 800px; display: block;" alt="Ariza namunasi">
+                </div>
+                <br>
+                <a href="docs/zayavka.pdf" target="_blank" class="btn btn-primary" style="background-color: var(--primary-navy); padding: 15px 40px; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 10px; border-radius: 8px;">
+                    <span style="font-size: 1.3rem;">&#128196;</span> Arizani yuklab olish
                 </a>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 40px;">
-            <img src="img/sxema.jpg" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);" alt="Sertifikatlashtirish sxemasi">
-        </div>
-
-        <div style="background: var(--bg-white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
-            <p style="margin-bottom: 15px; font-size: 1.05rem;"><strong>«SINOV SERTIFIQAT SERVIS» MChJ</strong> sertifikatlashtirish organi - O'zbekiston Respublikasi Milliy akkreditatsiya tizimi tomonidan O'zbekiston Respublikasi Milliy sertifikatlashtirish tizimida mahsulotlarni normativ hujjatlar talablariga muvofiqligini sertifikatlashtirish ishlarini olib borish huquqiga ega bo'lgan akkreditatsiyadan o'tgan organ.</p>
-            
-            <p style="margin-bottom: 15px; font-size: 1.05rem;"><strong>«SINOV SERTIFIQAT SERVIS» MChJ</strong> sertifikatlashtirish organi sertifikatlashtirish sohasida ishonchli hamkor sifatida e'tibor qozongan. Biz O'zR MST da ro'yxatdan o'tgan o'z akkreditatsiyalangan ekspertlarimizga egamiz. Xodimlarimizning yuqori tayyorgarlik darajasi va tezkorligi orqali oldimizga qo'yilgan vazifalarni sifatli bajarishga kafolat beramiz.</p>
-            
-            <h3 style="margin: 30px 0 15px;">Quyidagi mahsulotlar normativ hujjatlar talablariga muvofiq sertifikatlashtiriladi:</h3>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.05rem; margin-bottom: 30px;">
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Keramik g'isht</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Beton devorbop toshlar</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> G'ovak beton bloklar</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Og'ir va mayda donador betonlar</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Qurilish qorishmalari</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Quruq qurilish qorishmalari</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Keramik plitalar</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Tabiiy toshdan yasalgan me'moriy-qurilish mahsulotlari</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Qurilish ishlari uchun zich tog' jinslaridan olingan shag'al va graviy</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Maydalashdan olingan qum</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Tabiiy qum</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Yo'laklar uchun beton plitalar</li>
-                <li><i style="color: var(--accent-blue); margin-right: 10px; font-style: normal;">&#10004;</i> Beton va temir-beton mahsulotlari va konstruksiyalari</li>
-            </ul>
-            
-            <p style="margin-bottom: 15px; font-size: 1.05rem;">Biz barcha kerakli normativ hujjatlar va texnik talablarni chuqur bilgan holda, zamonaviy metodikalardan foydalanib, har qanday murakkablikdagi loyihalarni qisqa muddatlarda bajaramiz.</p>
-        </div>
-    </section>
-
-    <!-- Accreditation Images -->
-    <section class="bg-light" style="padding: 60px 0;">
-        <div class="container text-center">
-            <h2 class="section-title">Akkreditatsiya hujjatlari</h2>
-            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                <div>
-                    <h3 style="margin-bottom: 15px;">Guvohnoma</h3>
-                    <img src="docs/guv-org.jpg" style="height: 350px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer;" onclick="openLightbox('docs/guv-org.jpg')" alt="Guvohnoma">
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 15px;">Akkreditatsiya sohasi</h3>
-                    <div style="height: 350px; width: 250px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <a href="docs/obl-sert.pdf" target="_blank" style="text-align: center; color: var(--primary-navy); font-weight: 700; text-decoration: none;">
-                            <span style="font-size: 3rem; display: block; margin-bottom: 10px;">&#128196;</span>
-                            Hujjatni yuklab olish (PDF)
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 15px;">Akkreditatsiya o'tkazish standarti</h3>
-                    <div style="height: 350px; width: 250px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <a href="docs/Область ОС.pdf" target="_blank" style="text-align: center; color: var(--primary-navy); font-weight: 700; text-decoration: none;">
-                            <span style="font-size: 3rem; display: block; margin-bottom: 10px;">&#128196;</span>
-                            Hujjatni yuklab olish (PDF)
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 15px;">Sertifikat</h3>
-                    <img src="img/cert-aa.jpg" style="height: 350px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer;" onclick="openLightbox('img/cert-aa.jpg')" alt="Sertifikat">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal for Inner Page -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
-    <!-- Team Section -->
-    <section style="padding: 80px 0;">
-        <div class="container">
-            <h2 class="section-title">Bizning mutaxassislar</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; justify-content: center;">
-                <!-- Member 1 -->
-                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
-                    <img src="img/women.jpg" alt="Ахмедова Шахноза" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Ахмедова Шахноза</h3>
-                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Ekspert auditor, SO rahbari</p>
-                </div>
-                <!-- Member 2 -->
-                <div class="team-card" style="display: block; text-align: center; padding: 40px 20px;">
-                    <img src="img/men.jpg" alt="Хаитбаев Отамурод" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                    <h3 style="margin-bottom: 5px; font-size: 1.3rem;">Хаитбаев Отамурод</h3>
-                    <p class="role" style="color: var(--accent-blue); font-weight: 500;">Ekspert auditor, Sifat menejeri</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h3>SINOV SERTIFIQAT SERVIS</h3>
+                <p>Qurilish materiallari va konstruksiyalarini ishonchli sinovdan o‘tkazish hamda sertifikatlash.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Havolalar</h3>
+                <ul>
+                    <li><a href="sertifikatlashtirish.html">Sertifikatlashtirish</a></li>
+                    <li><a href="sertifikat-tuzilma.html">Sertifikatlashtirish organi tuzilishi</a></li>
+                    <li><a href="akkreditatsiya-hujjatlari.html">Akkreditatsiya hujjatlari</a></li>
+                    <li><a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a></li>
+                    <li><a href="narxlar.html">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Litsenziyalar</h3>
+                <p>O'ZAK.MS.0029</p>
+                <p>O'ZAK.SL.0154</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Ish vaqti</h3>
+                <p>Du - Ju: 09:00 - 17:00</p>
+                <p>Shanba: 09:00 - 14:00</p>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 sinovss.uz. Barcha huquqlar himoyalangan.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=15"></script>
 </body>
 </html>

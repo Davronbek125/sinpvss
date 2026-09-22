@@ -1,9 +1,9 @@
 :root {
-  /* Asosiy ranglar */
-  --primary-navy: #003399;      /* Asosiy to‘q ko‘k (UzTest sarlavhalar va header) */
-  --primary-dark: #0b2265;      /* Chuqur ko‘k (tugmalar hover holati va footer) */
-  --accent-blue: #0077cc;       /* Yorqin moviy (tugmalar, aktiv linklar) */
-  --accent-light: #e8f1fd;      /* Ochiq havorang (kartalar va tablar foni) */
+  /* Asosiy ranglar — uyg'unlashtirilgan ko'k palitra */
+  --primary-navy: #0A2A56;      /* Asosiy to‘q ko‘k (UzTest sarlavhalar va header) */
+  --primary-dark: #071B39;      /* Chuqur ko‘k (tugmalar hover holati va footer) */
+  --accent-blue: #1F6FE0;       /* Yorqin moviy (tugmalar, aktiv linklar) */
+  --accent-light: #EAF1FC;      /* Ochiq havorang (kartalar va tablar foni) */
 
   /* Fon va neytral ranglar */
   --bg-white: #ffffff;          /* Asosiy toza oq */
@@ -16,8 +16,8 @@
   --text-muted: #94a3b8;        /* Ikkinchi darajali belgilar */
 
   /* Shriftlar */
-  --font-heading: 'Roboto Condensed', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* CSS Reset & Global Styles */
@@ -33,12 +33,16 @@ body {
     background-color: var(--bg-white);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--primary-navy);
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 a {
@@ -64,8 +68,8 @@ ul {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 4px;
+    padding: 12px 28px;
+    border-radius: 8px;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
@@ -75,24 +79,29 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--accent-blue);
+    background: linear-gradient(135deg, var(--accent-blue), #1150a9);
     color: var(--bg-white);
+    box-shadow: 0 4px 15px rgba(31, 111, 224, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background: linear-gradient(135deg, #1150a9, var(--primary-dark));
     color: var(--bg-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(31, 111, 224, 0.4);
 }
 
 .btn-outline {
     background-color: transparent;
     color: var(--bg-white);
     border: 2px solid var(--bg-white);
+    border-radius: 8px;
 }
 
 .btn-outline:hover {
     background-color: var(--bg-white);
     color: var(--primary-navy);
+    transform: translateY(-2px);
 }
 
 /* Sections */
@@ -109,14 +118,19 @@ section {
 
 /* Header */
 .header {
-    background-color: var(--bg-white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
+    background-color: transparent;
+    position: relative;
     z-index: 1000;
 }
 
 /* Top-bar */
+.top-bar-wrapper {
+    background-color: var(--bg-white);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
 .top-bar {
     background-color: var(--primary-navy);
     color: var(--bg-white);
@@ -152,6 +166,21 @@ section {
 /* Main Navigation */
 .main-nav {
     padding: 15px 0;
+    position: relative;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.main-nav.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main-nav.hide-nav {
+    transform: translateY(-100%);
 }
 
 .nav-inner {
@@ -264,6 +293,12 @@ section {
     width: 100%;
     height: 100%;
     z-index: -1;
+    transform: scale(1);
+    transition: transform 10s ease-out;
+}
+
+.slide.active .slide-bg {
+    transform: scale(1.1);
 }
 
 .slide-content {
@@ -366,15 +401,16 @@ section {
 
 .stat-card {
     background: var(--bg-white);
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-bottom: 4px solid var(--accent-blue);
-    transition: transform 0.3s ease;
+    padding: 35px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(31, 111, 224, 0.1);
 }
 
 .stat-number, .stat-text {
@@ -681,7 +717,7 @@ section {
     outline: none;
     border-color: var(--accent-blue);
     background: var(--bg-white);
-    box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.1);
+    box-shadow: 0 0 0 3px rgba(31, 111, 224, 0.12);
 }
 
 .btn-block {
@@ -697,6 +733,8 @@ section {
     background-color: var(--primary-dark);
     color: rgba(255,255,255,0.8);
     padding: 60px 0 20px;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer-inner {
@@ -846,4 +884,79 @@ section {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+}
+/* Scroll Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-white);
+    min-width: 280px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--primary-navy) !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem !important;
+    text-transform: none !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-light);
+    color: var(--accent-blue) !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Triangle */
+.dropdown > a::after {
+    content: ' \u25BE'; /* Unicode for black down-pointing small triangle */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.dropdown:hover > a::after {
+    opacity: 1;
 }

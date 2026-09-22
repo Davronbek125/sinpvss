@@ -4,57 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SINOV SERTIFIQAT SERVIS - Испытание и сертификация строительных материалов</title>
-    
     <!-- Meta SEO -->
     <meta name="description" content="Испытание строительных материалов и конструкций в аккредитованной испытательной лаборатории (O‘zDSt ISO/IEC 17025) и сертификация продукции.">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
-
     <!-- Header: Top-bar va Navigatsiya -->
-    <header class="header">
-        <div class="top-bar">
-            <div class="container top-bar-inner">
-                <div class="top-info">
-                    <span><i class="icon-clock"></i> Пн - Пт: 09:00 - 17:00 | Сб: 09:00 - 14:00</span>
-                    <span><i class="icon-phone"></i> +998 88 100 28 69, +998 99 335 07 70</span>
-                    <span><i class="icon-email"></i> info@sinovss.uz</span>
+    <!-- Header: Top-bar va Navigatsiya (Turonss style) -->
+    <header class="header" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="background: #f8f9fa; padding: 15px 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo" style="height: 80px;"></a>
                 </div>
-                <div class="top-lang">
-                    <a href="index.html">UZ</a> | <a href="index_ru.html" class="active">RU</a>
+                <div style="text-align: right; font-size: 0.95rem; color: #333;">
+                    <div class="top-lang" style="margin-bottom: 10px; font-weight: bold;">
+                        <a href="index.html" style="color: #333; text-decoration: none;">UZ</a> | <a href="index_ru.html" class="active" style="color: var(--accent-blue); text-decoration: none;">RU</a>
+                    </div>
+                    <div style="margin-bottom: 5px;"><i class="icon-phone"></i> Tel: +998 88 100 28 69</div>
+                    <div><i class="icon-email"></i> Email: info@sinovss.uz</div>
                 </div>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="container nav-inner">
-                <div class="logo">
-                    <a href="index_ru.html">
-                        <img src="img/logo.jpg" alt="SINOV SERTIFIQAT SERVIS" style="height: 90px;">
-                    </a>
-                </div>
-                <button class="mobile-menu-btn">&#9776;</button>
-                <ul class="nav-links">
-                    <li><a href="index_ru.html" class="active">Главная</a></li>
-                    <li><a href="sertifikatlashtirish_ru.html">Сертификация</a></li>
-                    <li><a href="sinov-laboratoriyasi_ru.html">Испытательная лаборатория</a></li>
-                    <li><a href="narxlar_ru.html">Услуги и цены</a></li>
-                    <li><a href="hujjatlar_ru.html">Документы и Открытые данные</a></li>
-                    <li><a href="#footer">Контакты</a></li>
+                                <nav class="main-nav" style="background-color: var(--primary-navy); padding: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div class="container nav-inner" style="display: flex; justify-content: center; position: relative;">
+                <button class="mobile-menu-btn" style="color: white; border: none; background: transparent; font-size: 1.5rem; display: none;">&#9776;</button>
+                <ul class="nav-links" style="display: flex; gap: 25px; padding: 15px 0; margin: 0; list-style: none; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    <li><a href="index_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Главная</a></li>
+                    
+                    <li class="dropdown" style="position: relative;">
+                        <a href="sertifikatlashtirish_ru.html" class="dropbtn" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 5px;">
+                            Сертификация
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sertifikatlashtirish_ru.html">Сертификация</a>
+                            <a href="sertifikat-tuzilma_ru.html">Структура органа по сертификации</a>
+                            <a href="akkreditatsiya-hujjatlari_ru.html">Документы об аккредитации</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown" style="position: relative;">
+                        <a href="sinov-laboratoriyasi_ru.html" class="dropbtn" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 5px;">
+                            Испытательная лаборатория
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sinov-laboratoriyasi_ru.html">Испытательная лаборатория</a>
+                            <a href="lab-hujjatlar_ru.html">Документы</a>
+                            <a href="lab-lavhalar_ru.html">Видео из рабочего процесса</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="narxlar_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Цены на услуги</a></li>
+                    <li><a href="hujjatlar_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Документы и Открытые данные</a></li>
+                    <li><a href="index_ru.html#contact-form" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Контакты</a></li>
                 </ul>
-                <div class="nav-btn">
-                    <button class="btn btn-primary" onclick="openModal()">Оставить заявку</button>
-                </div>
             </div>
         </nav>
     </header>
-
     <!-- Hero Slider -->
     <section class="hero-slider">
         <div class="slider-container" id="sliderContainer">
@@ -71,7 +82,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- Slide 2 -->
             <div class="slide">
                 <div class="slide-bg" style="background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), url('img/slide2.jpg') center/cover;"></div>
@@ -86,7 +96,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Slider Controls -->
         <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
@@ -95,27 +104,26 @@
             <span class="dot" onclick="currentSlide(1)"></span>
         </div>
     </section>
-
     <!-- Jonli Statistika (Fun Facts) -->
     <section class="stats-section bg-light">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card">
+                <div class="stat-card fade-up">
                     <h2 class="stat-number" data-target="10">0</h2>
                     <span class="stat-suffix">+ лет</span>
                     <p>Опыт успешной деятельности в отрасли</p>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card fade-up">
                     <h2 class="stat-number" data-target="15">0</h2>
                     <span class="stat-suffix">+</span>
                     <p>Аккредитованных направлений строительных материалов</p>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card fade-up">
                     <h2 class="stat-number" data-target="100">0</h2>
                     <span class="stat-suffix">%</span>
                     <p>Полное соответствие требованиям O‘zDSt ISO/IEC 17025</p>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card fade-up">
                     <h2 class="stat-text">Быстро</h2>
                     <span class="stat-suffix"></span>
                     <p>Официальные протоколы испытаний в кратчайшие сроки</p>
@@ -123,49 +131,42 @@
             </div>
         </div>
     </section>
-
     <!-- Interaktiv Tablar (Mahsulotlar va Xizmatlar) -->
     <section class="services-tabs" id="services">
         <div class="container">
-            <h2 class="section-title">Продукция для испытаний и сертификации</h2>
-            
-            <div class="tabs-header">
+            <h2 class="section-title fade-up">Продукция для испытаний и сертификации</h2>
+            <div class="tabs-header fade-up">
                 <button class="tab-btn active" onclick="openTab(event, 'tab1')">Стеновые материалы</button>
                 <button class="tab-btn" onclick="openTab(event, 'tab2')">Смеси и вяжущие вещества</button>
                 <button class="tab-btn" onclick="openTab(event, 'tab3')">Ископаемые и отделочные камни</button>
                 <button class="tab-btn" onclick="openTab(event, 'tab4')">Конструкции и плиты</button>
             </div>
-
-            <div class="tab-content" id="tab1" style="display: block;">
+            <div class="tab-content fade-up" id="tab1" style="display: block;">
                 <h3>Стеновые материалы</h3>
                 <p>Мы проводим испытания таких важных строительных материалов, как керамический кирпич, бетонные стеновые камни, блоки из ячеистого бетона в нашей аккредитованной лаборатории и выдаем сертификат соответствия.</p>
                 <button class="btn btn-primary" onclick="openModal()">Подать заявку на испытание</button>
             </div>
-
-            <div class="tab-content" id="tab2">
+            <div class="tab-content fade-up" id="tab2">
                 <h3>Смеси и вяжущие вещества</h3>
                 <p>Мы проверяем качество тяжелых и мелкозернистых бетонов, строительных растворов, сухих строительных смесей на соответствие государственным стандартам.</p>
                 <button class="btn btn-primary" onclick="openModal()">Подать заявку на испытание</button>
             </div>
-
-            <div class="tab-content" id="tab3">
+            <div class="tab-content fade-up" id="tab3">
                 <h3>Ископаемые и отделочные камни</h3>
                 <p>Мы проводим испытания показателей прочности и безопасности таких природных ресурсов, как изделия из природного камня (мрамор, гранит), дробленый песок, природный песок, гравий.</p>
                 <button class="btn btn-primary" onclick="openModal()">Подать заявку на испытание</button>
             </div>
-
-            <div class="tab-content" id="tab4">
+            <div class="tab-content fade-up" id="tab4">
                 <h3>Конструкции и плиты</h3>
                 <p>Мы сертифицируем крупные и отделочные конструкции, такие как керамическая плитка, бетонная тротуарная плитка (брусчатка), железобетонные изделия.</p>
                 <button class="btn btn-primary" onclick="openModal()">Подать заявку на испытание</button>
             </div>
         </div>
     </section>
-
     <!-- Akkreditatsiya va Guvohnomalar -->
     <section class="accreditation-section bg-light">
         <div class="container">
-            <h2 class="section-title">Аккредитация и Государственные Свидетельства</h2>
+            <h2 class="section-title fade-up">Аккредитация и Государственные Свидетельства</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox('img/akk.jpg')">
                     <img src="img/akk.jpg" alt="Аккредитация" style="width: 100%; height: 100%; object-fit: cover;">
@@ -185,17 +186,15 @@
             </div>
         </div>
     </section>
-
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
-
     <!-- Rahbariyat / Xodimlar -->
     <section class="team-section">
         <div class="container">
-            <h2 class="section-title">Руководство</h2>
+            <h2 class="section-title fade-up">Руководство</h2>
             <div class="team-card">
                 <div class="team-img-placeholder" style="background: none; padding: 0;">
                     <img src="img/women.jpg" alt="Madrimova D.Ya." style="width: 100%; height: 100%; object-fit: cover;">
@@ -208,25 +207,21 @@
             </div>
         </div>
     </section>
-
     <!-- Biz bilan bog'lanish (Contact Section) -->
     <section class="contact-section" id="contact-form">
         <div class="container">
-            <h2 class="section-title">Свяжитесь с нами</h2>
+            <h2 class="section-title fade-up">Свяжитесь с нами</h2>
             <div class="contact-wrapper">
-                
                 <div class="contact-info-panel">
                     <h3>Контактная информация</h3>
                     <p>Есть вопросы или хотите воспользоваться нашими услугами? Свяжитесь с нами!</p>
-                    
                     <div class="info-item">
                         <i>&#9742;</i>
                         <div>
                             <h4>Телефон</h4>
-                            <p>+998 88 100 28 69<br>+998 99 335 07 70</p>
+                            <p>+998 88 100 28 69</p>
                         </div>
                     </div>
-                    
                     <div class="info-item">
                         <i>&#128338;</i>
                         <div>
@@ -234,7 +229,6 @@
                             <p>Пн - Пт: 09:00 - 17:00<br>Сб: 09:00 - 14:00</p>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <i>&#128205;</i>
                         <div>
@@ -242,7 +236,6 @@
                             <p>Хорезмская область, Тупраккалинский район,<br>ул. Халклар дустлиги, д. 10/3</p>
                         </div>
                     </div>
-                    
                     <div class="info-item" style="margin-top: 20px;">
                         <i>&#128205;</i>
                         <div>
@@ -251,11 +244,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="contact-form-panel">
                     <h3>Оставить заявку</h3>
                     <p class="form-subtitle">Наши специалисты скоро свяжутся с вами.</p>
-                    
                     <form id="tgForm" onsubmit="sendToTelegram(event)">
                         <div class="form-group">
                             <label for="name">Ф.И.О / Название компании *</label>
@@ -283,7 +274,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container footer-inner">
@@ -304,13 +294,18 @@
                 <p>O'ZAK.MS.0029</p>
                 <p>O'ZAK.SL.0154</p>
             </div>
+
+            <div class="footer-col">
+                <h3>Режим работы</h3>
+                <p>Пн - Пт: 09:00 - 17:00</p>
+                <p>Сб: 09:00 - 14:00</p>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 sinovss.uz. Все права защищены.</p>
         </div>
     </footer>
-
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=15"></script>
 </body>
 </html>
