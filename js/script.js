@@ -199,6 +199,34 @@ if (mobileMenuBtn) {
     });
 }
 
+// Mobile Dropdown Tap Logic
+const mobileDropdowns = document.querySelectorAll('.dropdown');
+mobileDropdowns.forEach(dropdown => {
+    const parentLink = dropdown.querySelector('a');
+    if (parentLink) {
+        parentLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992) {
+                if (!dropdown.classList.contains('active')) {
+                    e.preventDefault();
+                    mobileDropdowns.forEach(d => { if (d !== dropdown) d.classList.remove('active'); });
+                    dropdown.classList.add('active');
+                }
+            }
+        });
+    }
+});
+
+// Auto-close mobile menu when clicking sub-links or regular nav links
+const clickableNavLinks = document.querySelectorAll('.nav-links a:not(.dropdown > a), .dropdown-content a');
+clickableNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 992 && navLinks) {
+            navLinks.classList.remove('active');
+            mobileDropdowns.forEach(d => d.classList.remove('active'));
+        }
+    });
+});
+
 
 
 
