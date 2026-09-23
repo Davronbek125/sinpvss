@@ -1167,6 +1167,97 @@ section {
         font-size: 1.6rem;
         margin-bottom: 30px;
     }
+
+    /* Sinov laboratoriyasi sahifasi mobil moslashuvi (Yozuvlar, Shriftlar va Oraliqlar) */
+    .lab-card,
+    section.container > div[style*="background: var(--bg-white)"],
+    section.container > div[style*="background:var(--bg-white)"] {
+        padding: 24px 16px !important;
+        border-radius: 10px !important;
+        margin-bottom: 25px !important;
+    }
+
+    section.container h2.section-title {
+        font-size: 1.35rem !important;
+        margin-bottom: 16px !important;
+    }
+
+    section.container h3 {
+        font-size: 1.15rem !important;
+        line-height: 1.35 !important;
+        margin: 25px 0 15px 0 !important;
+    }
+
+    section.container h4 {
+        font-size: 1.02rem !important;
+        line-height: 1.35 !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    section.container p {
+        font-size: 0.92rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Ro'yxat elementlari (Materiallar va xizmatlar) */
+    section.container ul[style*="list-style: none"] {
+        padding-left: 0 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 25px !important;
+    }
+
+    section.container ul[style*="list-style: none"] li {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 12px !important;
+        display: flex !important;
+        align-items: flex-start !important;
+    }
+
+    section.container ul[style*="list-style: none"] li i {
+        margin-right: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Yuklab olish tugmalari mobilda to'liq sig'ishi uchun */
+    section.container a.btn.btn-primary[style*="padding: 15px 40px"],
+    section.container a.btn.btn-primary {
+        padding: 12px 16px !important;
+        font-size: 0.88rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        line-height: 1.4 !important;
+    }
+
+    /* PDF iframe konteyneri mobilda ixchamlashtiriladi */
+    div[style*="height: 1100px"],
+    div:has(> iframe[src*=".pdf"]) {
+        height: 460px !important;
+    }
+
+    /* Mutaxassislar (Jamoa kartalari) */
+    .team-card[style*="padding: 40px 20px"] {
+        padding: 24px 16px !important;
+    }
+    .team-card[style*="padding: 40px 20px"] img {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 12px !important;
+    }
+    .team-card[style*="padding: 40px 20px"] h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: 4px !important;
+    }
+    .team-card[style*="padding: 40px 20px"] .role {
+        font-size: 0.88rem !important;
+    }
+
     .tab-btn {
         padding: 10px 15px;
         font-size: 0.9rem;
