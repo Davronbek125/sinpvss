@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы и Открытые данные - SINOV SERTIFIQAT SERVIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=19">
+    <style>
+        .tabs-container {
+            margin-top: 30px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tab-btn {
+            padding: 12px 25px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover {
+            color: var(--primary-navy);
+        }
+        .tab-btn.active {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+        }
+        .tab-content {
+            display: none;
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .doc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .doc-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .doc-list li::before {
+            content: "\1F4D1";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .info-box {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .info-box ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        .info-box ul li {
+            margin-bottom: 10px;
+        }
+        .lex-link:hover {
+            color: var(--accent-blue) !important;
+            text-decoration: underline !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="background: #f8f9fa; padding: 15px 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo">
+                    <a href="index_ru.html"><img src="img/logo.jpg" alt="Logo" style="height: 80px;"></a>
+                </div>
+                <div style="text-align: right; font-size: 0.95rem; color: #333;">
+                    <div class="top-lang" style="margin-bottom: 10px; font-weight: bold;">
+                        <a href="hujjatlar.html" style="color: #333; text-decoration: none;">UZ</a> | <a href="hujjatlar_ru.html" class="active" style="color: var(--accent-blue); text-decoration: none;">RU</a>
+                    </div>
+                    <div style="margin-bottom: 5px;"><i class="icon-phone"></i> Tel: +998 88 100 28 69</div>
+                    <div><i class="icon-email"></i> Email: info@sinovss.uz</div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav" style="background-color: var(--primary-navy); padding: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div class="container nav-inner" style="display: flex; justify-content: center; position: relative;">
+                <button class="mobile-menu-btn" style="color: white; border: none; background: transparent; font-size: 1.5rem; display: none;">&#9776;</button>
+                <ul class="nav-links" style="display: flex; gap: 25px; padding: 15px 0; margin: 0; list-style: none; flex-wrap: wrap; justify-content: center; align-items: center;">
+                    <li><a href="index_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Главная</a></li>
+                    
+                    <li class="dropdown" style="position: relative;">
+                        <a href="sertifikatlashtirish_ru.html" class="dropbtn" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 5px;">
+                            Сертификация
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sertifikatlashtirish_ru.html">Сертификация</a>
+                            <a href="sertifikat-tuzilma_ru.html">Структура органа по сертификации</a>
+                            <a href="akkreditatsiya-hujjatlari_ru.html">Документы об аккредитации</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown" style="position: relative;">
+                        <a href="sinov-laboratoriyasi_ru.html" class="dropbtn" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; display: flex; align-items: center; gap: 5px;">
+                            Испытательная лаборатория
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="sinov-laboratoriyasi_ru.html">Испытательная лаборатория</a>
+                            <a href="lab-hujjatlar_ru.html">Документы</a>
+                            <a href="lab-lavhalar_ru.html">Видео из рабочего процесса</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="narxlar_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Цены на услуги</a></li>
+                    <li><a href="hujjatlar_ru.html" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Документы и Открытые данные</a></li>
+                    <li><a href="index_ru.html#contact-form" style="color: white; font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s;">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Inner Page Header -->
+    <section class="hero-slider" style="height: 300px;">
+        <div class="slide active" style="height: 300px;">
+            <div class="slide-bg" style="background-color: var(--primary-navy);"></div>
+            <div class="container slide-content" style="text-align: center; top: 60%;">
+                <h1 style="font-size: 2.5rem;">ДОКУМЕНТЫ И ОТКРЫТЫЕ ДАННЫЕ</h1>
+                <p>Законодательная и нормативно-правовая база, система сертификации и комплекс открытых данных</p>
+            </div>
+        </div>
+    </section>
+    <!-- Main Content -->
+    <section class="container" style="padding: 60px 0; min-height: 50vh;">
+        <div class="tabs-container">
+            <!-- Tabs Navigation -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'tab1')">Законодательная и нормативно-правовая база</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab2')">Национальная система сертификации</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab3')">Реестр несоответствующей продукции</button>
+            </div>
+            <!-- Tab 1: Законодательная и нормативно-правовая база -->
+            <div id="tab1" class="tab-content active">
+                <h2 style="margin-bottom: 25px; color: var(--primary-navy);">Законодательная и нормативно-правовая база</h2>
+                <ul class="doc-list">
+                    <li><a href="https://www.lex.uz/ru/docs/-7483820?ONDATE=10.06.2026%2001" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Указ Президента Республики Узбекистан от 18 апреля 2024 года № УП-67 «О мерах по стимулированию производственной, экспортной и предпринимательской деятельности, повышению эффективности торговой и промышленной политики»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-6270526?ONDATE=09.11.2024" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Закон Республики Узбекистан «О стандартизации» (ЗРУ-800)</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-6821843" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Президента Республики Узбекистан от 28 февраля 2024 года № ПП-91 «О мерах по организации деятельности Узбекского агентства по техническому регулированию»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-6821840" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Указ Президента Республики Узбекистан от 27 февраля 2024 года № УП-41 «О мерах по дальнейшему совершенствованию государственного управления в области технического регулирования»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-2793261?ONDATE=12.07.2024%2000" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Кабинета Министров от 14 октября 2015 года № 292 «О мерах по реализации Закона Республики Узбекистан «Об оценке соответствия»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-5249376" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Кабинета Министров от 30 января 2021 года № 43 «Об утверждении перечней объектов оценки соответствия в Республике Узбекистан, подлежащих обязательному подтверждению соответствия»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-7080176" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Кабинета Министров Республики Узбекистан от 14 августа 2024 года № 502 «Об утверждении положений о процедурах государственной регистрации и оценки соответствия продукции»</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-6392312" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Закон Республики Узбекистан «О техническом регулировании» (ЗРУ-819)</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-4476578" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Президента Республики Узбекистан от 15 августа 2019 года № ПП-4419 «О дальнейшем совершенствовании системы оценки соответствия и развитии комплекса испытательных лабораторий в Республике Узбекистан»</a></li>
+                </ul>
+                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue);">ПРАВА И ОБЯЗАННОСТИ КЛИЕНТА (ПСК-14)</h3>
+                <div class="info-box">
+                    <ol style="padding-left: 20px; line-height: 1.8;">
+                        <li>Производить единовременную оплату в соответствии с соглашением о применении сертификата и использовании знака соответствия;</li>
+                        <li>Маркировать сертифицированную серийно выпускаемую продукцию знаком соответствия под свою ответственность;</li>
+                        <li>Предоставлять органу по сертификации возможность проверки условий производства и качества сертифицированной продукции на соответствие требованиям нормативных документов;</li>
+                        <li>Извещать орган по сертификации в течение 5 календарных дней о планируемых изменениях в конструкции продукции или технологии производства, которые могут повлиять на характеристики продукции, подтвержденные при сертификации;</li>
+                        <li>Обеспечивать проведение инспекционного контроля и оплачивать связанные с ним расходы;</li>
+                        <li>Предоставлять ежегодные сертификаты по рекламе и реализации сертифицированной продукции;</li>
+                        <li>Своевременно проводить испытания выпускаемой продукции для выполнения требований нормативного документа на сертифицируемую продукцию.</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Tab 2: Национальная система сертификации -->
+            <div id="tab2" class="tab-content fade-up">
+                <h2 style="margin-bottom: 25px; color: var(--primary-navy);">Национальная система сертификации</h2>
+                <div class="info-box">
+                    <h3>Узбекское агентство по техническому регулированию</h3>
+                    <p>Является национальным органом по сертификации Республики Узбекистан и в соответствии с действующим законодательством осуществляет следующую деятельность:</p>
+                    <ul>
+                        <li>осуществляет государственную политику в области сертификации, устанавливает общие правила проведения сертификации, публикует официальную информацию о них;</li>
+                        <li>разрабатывает проекты программ по совершенствованию системы сертификации и представляет их на рассмотрение Правительства;</li>
+                        <li>по согласованию с Кабинетом Министров Республики Узбекистан принимает решения о присоединении к международным системам сертификации, а также заключает соглашения о взаимном признании результатов сертификации;</li>
+                        <li>определяет перечень продукции, подлежащей обязательной сертификации, и вносит его на утверждение Кабинета Министров Республики Узбекистан;</li>
+                        <li>ведет государственные реестры сертифицированной продукции, аттестованных экспертов-аудиторов по качеству;</li>
+                        <li>осуществляет государственный надзор за соблюдением требований обязательной сертификации;</li>
+                        <li>приостанавливает и отменяет действие сертификатов соответствия и знаков соответствия за нарушение норм законодательства о сертификации.</li>
+                    </ul>
+                </div>
+                <div class="info-box" style="border-left-color: #28a745; background-color: #f4fdf6;">
+                    <h3>Онлайн-услуги по оценке соответствия</h3>
+                    <p style="margin-bottom: 10px;">Для граждан и субъектов предпринимательства все услуги по сертификации продукции осуществляются через таможенную информационную систему — <strong>ТИС «Единое окно»</strong>.</p>
+                    <a href="http://singlewindow.uz/?lang=ru_RU" target="_blank" class="btn btn-outline" style="border-color: #28a745; color: #28a745;">Перейти в систему «Единое окно»</a>
+                    <p style="margin-top: 20px; margin-bottom: 10px;">С актуальным перечнем аккредитованных органов по оценке соответствия вы можете ознакомиться на официальном сайте Центра по аккредитации Узбекистана.</p>
+                    <a href="https://akkred.uz" target="_blank" class="btn btn-outline" style="border-color: #28a745; color: #28a745;">Перейти на сайт akkred.uz</a>
+                </div>
+            </div>
+            <!-- Tab 3: Реестр несоответствующей продукции -->
+            <div id="tab3" class="tab-content fade-up">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="footer" style="background-color: var(--primary-navy); color: #fff; padding: 40px 0 20px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.5rem;">SINOV SERTIFIQAT SERVIS</h3>
+                <p style="opacity: 0.8; line-height: 1.6;">Испытание на соответствие стандартам безопасности и качества строительных материалов, производимых в Узбекистане и импортируемых из-за рубежа.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.2rem;">Контакты</h3>
+                <ul style="list-style: none; padding: 0; opacity: 0.8; line-height: 1.8;">
+                    <li>Хорезмская область, Тупроккалинский район</li>
+                    <li>улица Халклар Дустлиги, дом 10/3</li>
+                    <li>+998 88 100 28 69</li>
+                    <li>info@sinovss.uz</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.2rem;">Быстрые ссылки</h3>
+                <ul style="list-style: none; padding: 0; opacity: 0.8; line-height: 1.8;">
+                    <li><a href="sertifikatlashtirish_ru.html" style="color: #fff;">Сертификация</a></li>
+                    <li><a href="sinov-laboratoriyasi_ru.html" style="color: #fff;">Испытательная лаборатория</a></li>
+                    <li><a href="narxlar_ru.html" style="color: #fff;">Цены на услуги</a></li>
+                    <li><a href="hujjatlar_ru.html" style="color: #fff;">Документы</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2026 sinovss.uz. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="js/script.js?v=19"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

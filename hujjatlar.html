@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hujjatlar va Ochiq ma'lumotlar - SINOV SERTIFIQAT SERVIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=19">
+    <style>
+        .tabs-container {
+            margin-top: 40px;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 12px 25px;
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active {
+            background: var(--primary-navy);
+            color: #fff;
+        }
+        .tab-btn:hover:not(.active) {
+            background: #f0f0f0;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .doc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .doc-list li {
+            padding: 20px;
+            background: var(--bg-white);
+            border-left: 4px solid var(--primary-navy);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .info-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .info-box h3 {
+            margin-bottom: 15px;
+            color: var(--primary-navy);
+        }
+        .info-box ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        .info-box ul li {
+            margin-bottom: 10px;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            color: #777;
+        }
+        .empty-state i {
+            font-size: 3rem;
+            color: #ccc;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+
+    <style>
+        .lex-link:hover {
+            color: var(--accent-blue) !important;
+            text-decoration: underline !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header: Top-bar va Navigatsiya (Turonss style) -->
+    <header class="header" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="background: #f8f9fa; padding: 15px 0;">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Logo" style="height: 80px;"></a>
+                </div>
+                <div style="text-align: right; font-size: 0.95rem; color: #333;">
+                    <div class="top-lang" style="margin-bottom: 10px; font-weight: bold;">
+                        <a href="hujjatlar.html" class="active" style="color: #0245cc;">UZ</a> | <a href="hujjatlar_ru.html" style="color: #333;">RU</a>
+                    </div>
+                    <div style="margin-bottom: 5px;"><i class="icon-phone"></i> Tel: +998 88 100 28 69</div>
+                    <div><i class="icon-email"></i> Email: info@sinovss.uz</div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav" style="background-color: #0245cc; padding: 0;">
+            <div class="container nav-inner" style="display: flex; justify-content: center;">
+                <button class="mobile-menu-btn" style="color: white; border: none; background: transparent; font-size: 1.5rem; display: none;">&#9776;</button>
+                <ul class="nav-links" style="display: flex; gap: 20px; padding: 15px 0; margin: 0; list-style: none; flex-wrap: wrap; justify-content: center;">
+                    <li><a href="index.html" style="color: white; font-weight: 600; text-transform: uppercase;">Bosh sahifa</a></li>
+                    <li class="dropdown">
+                    <a href="sertifikatlashtirish.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sertifikatlashtirish</a>
+                    <div class="dropdown-content">
+                        <a href="sertifikatlashtirish.html">Sertifikatlashtirish</a>
+                        <a href="sertifikat-tuzilma.html">Sertifikatlashtirish organi tuzilishi</a>
+                        <a href="akkreditatsiya-hujjatlari.html">Akkreditatsiya hujjatlari</a>
+                    </div>
+                </li>
+                    <li class="dropdown">
+                    <a href="sinov-laboratoriyasi.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sinov laboratoriyasi</a>
+                    <div class="dropdown-content">
+                        <a href="sinov-laboratoriyasi.html">Sinov laboratoriyasi</a>
+                        <a href="lab-hujjatlar.html">Hujjatlar</a>
+                        <a href="lab-lavhalar.html">Ish jarayonidan lavhalar</a>
+                    </div>
+                </li>
+                    <li><a href="narxlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html" style="color: white; font-weight: 600; text-transform: uppercase;">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                    <li><a href="index.html#contact-form" style="color: white; font-weight: 600; text-transform: uppercase;">Aloqa</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Inner Page Header -->
+    <section class="hero-slider" style="height: 300px;">
+        <div class="slide active" style="height: 300px;">
+            <div class="slide-bg" style="background-color: var(--primary-navy);"></div>
+            <div class="container slide-content" style="text-align: center; top: 60%;">
+                <h1 style="font-size: 2.5rem;">HUJJATLAR VA OCHIQ MA'LUMOTLAR</h1>
+                <p>Qonunchilik va normativ-huquqiy asoslar, sertifikatlash tizimi hamda ochiq ma'lumotlar to'plami</p>
+            </div>
+        </div>
+    </section>
+    <!-- Main Content -->
+    <section class="container" style="padding: 60px 0; min-height: 50vh;">
+        <div class="tabs-container">
+            <!-- Tabs Navigation -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'tab1')">Qonunchilik va normativ-huquqiy asoslar</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab2')">Milliy sertifikatlash tizimi</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab3')">Nomuvofiq deb topilgan mahsulotlar</button>
+            </div>
+            <!-- Tab 1: Qonunchilik va normativ-huquqiy asoslar -->
+            <div id="tab1" class="tab-content active">
+                <h2 style="margin-bottom: 25px; color: var(--primary-navy);">Qonunchilik va normativ-huquqiy asoslar</h2>
+                <ul class="doc-list">
+                    <li><a href="https://www.lex.uz/uz/docs/-7483820?ONDATE=10.06.2026%2001" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Prezidentining 2025-yil 18-apreldagi «Ishlab chiqarish, eksport va tadbirkorlik faoliyatini rag‘batlantirish, savdo va sanoat siyosati samaradorligini oshirish chora-tadbirlari to‘g‘risida»gi PF-67-son Farmoni</a></li>
+                    <li><a href="https://lex.uz/docs/-6270526?ONDATE=09.11.2024" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasining «Standartlashtirish to‘g‘risida»gi (O’RQ-800) Qonuni</a></li>
+                    <li><a href="https://lex.uz/docs/-6821843" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Prezidentining 2024-yil 28-fevraldagi «O‘zbekiston texnik jihatdan tartibga solish agentligining faoliyatini tashkil etish chora-tadbirlari to‘g‘risida»gi PQ-91-son Qarori</a></li>
+                    <li><a href="https://lex.uz/uz/docs/-6821840" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Prezidentining 2024-yil 27-fevraldagi «Texnik jihatdan tartibga solish sohasidagi davlat boshqaruvini yanada takomillashtirishga doir chora-tadbirlar to‘g‘risida»gi PF-41-son Farmoni</a></li>
+                    <li><a href="https://lex.uz/ru/docs/-2793261?ONDATE=12.07.2024%2000" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Vazirlar Mahkamasining 2015-yil 14-oktabrdagi “Muvofiqlikni baholash to‘g‘risida”gi O‘zbekiston Respublikasi Qonunini amalga oshirish chora-tadbirlari to‘g‘risida”gi 292-sonli qarori</a></li>
+                    <li><a href="https://lex.uz/uz/docs/-5249376" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Vazirlar Mahkamasining 2021-yil 30-yanvardagi “O‘zbekiston Respublikasida muvofiqligi tasdiqlanishi lozim bo‘lgan muvofiqlikni baholash obyektlari ro‘yxatlarini tasdiqlash to‘g‘risida”gi 43-sonli qarori</a></li>
+                    <li><a href="https://lex.uz/uz/docs/-7080176" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Vazirlar Mahkamasining 2024-yil 14-avgustdagi “Mahsulotlarni davlat ro‘yxatidan o‘tkazish va muvofiqlikni baholash tartiblariga oid nizomlarni tasdiqlash to‘g‘risida”gi 502-sonli qarori</a></li>
+                    <li><a href="https://lex.uz/uz/docs/-6392312" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasining “Texnik jihatdan tartibga solish to‘g‘risida”gi (O‘RQ-819) Qonuni</a></li>
+                    <li><a href="https://lex.uz/docs/-4476578" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Prezidentining qarori, 15.08.2019 yildagi PQ-4419-son «O‘zbekiston respublikasida muvofiqlikni baholash tizimini yanada takomillashtirish va sinov laboratoriyalari kompleksini rivojlantirish» to‘g‘risida</a></li>
+                </ul>
+                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue);">MIJOZNING HUQUQLARI VA MAJBURIYATLARI (PSK-14)</h3>
+                <div class="info-box">
+                    <ol style="padding-left: 20px; line-height: 1.8;">
+                        <li>Sertifikatni qo‘llash va muvofiqlik belgisidan foydalanish to‘g‘risidagi bitimga muvofiq bir martalik to‘lovni to‘lash;</li>
+                        <li>Sertifikatlangan ommaviy ishlab chiqarilgan mahsulotlarni o’z javobgarligi ostida muvofiqlik belgisi bilan belgilash;</li>
+                        <li>Sertifikatlashtirish organiga sertifikatlangan mahsulotlarning ishlab chiqarish shartlari va sifatini normativ hujjatlar talablariga muvofiqligini tekshirish imkoniyatini berish;</li>
+                        <li>Sertifikatlash paytida tasdiqlangan mahsulotlarning xususiyatlariga ta’sir qilishi mumkin bo’lgan mahsulot dizayni yoki texnologiyasiga rejalashtirilgan o’zgartirishlar kiritilganda 5 kalendar kun ichida organiga xabar berish;</li>
+                        <li>Inspeksiya nazorati o‘tkazilishini ta’minlash va xarajatlarni to'lash;</li>
+                        <li>Sertifikatlangan mahsulotlarni reklama qilish va sotish bo’yicha yillik sertifikatlarni taqdim etish;</li>
+                        <li>Sertifikatlanadigan mahsulotlarning normativ hujjati talablarini bajarish uchun ishlab chiqarilayotgan mahsulotlarni o’z vaqtida sinovdan o‘tkazish;</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Tab 2: Milliy sertifikatlash tizimi -->
+            <div id="tab2" class="tab-content fade-up">
+                <h2 style="margin-bottom: 25px; color: var(--primary-navy);">Milliy sertifikatlash tizimi</h2>
+                <div class="info-box">
+                    <h3>O‘zbekiston texnik jihatdan tartibga solish agentligi</h3>
+                    <p>O’zbekiston Respublikasining sertifikatlashtirish bo’yicha milliy organi bo’lib, amaldagi qonunchilikka binoan quyidagi faoliyatlarni bajaradi:</p>
+                    <ul>
+                        <li>sertifikatlashtirish sohasida davlat siyosatini amalga oshiradi, sertifikatlashtirish o‘tkazish yuzasidan umumiy qoidalarni belgilaydi, ular to‘g‘risida rasmiy axborotlar e’lon qilib boradi;</li>
+                        <li>sertifikatlashtirish tizimini takomillashtirish dasturlarining loyihalarini ishlab chiqadi hamda ularni Hukumat muhokamasiga taqdim etadi;</li>
+                        <li>O‘zbekiston Respublikasi Vazirlar Mahkamasi bilan kelishgan holda sertifikatlashtirishning xalqaro tizimlariga qo‘shilish to‘g‘risida qarorlar qabul qiladi, shuningdek sertifikatlashtirish natijalarini o‘zaro e’tirof etish to‘g‘risida bitimlar tuzadi;</li>
+                        <li>majburiy ravishda sertifikatlanadigan mahsulotlarning ro‘yxatini belgilaydi va uni O‘zbekiston Respublikasi Vazirlar Mahkamasi tasdig‘iga kiritadi;</li>
+                        <li>sertifikatlashtirilgan mahsulotlarning, attestatsiyadan o‘tkazilgan sifat bo‘yicha ekspert-auditorlarning davlat reyestrlarini yuritadi;</li>
+                        <li>majburiy sertifikatlashtirish talablariga rioya etilishi ustidan davlat nazoratini amalga oshiradi;</li>
+                        <li>sertifikatlashtirish to‘g‘risidagi qonunchilik normalari buzilganligi uchun muvofiqlik sertifikatlarining va muvofiqlik belgilarining amal qilishini to‘xtatib turadi hamda ularni bekor qiladi.</li>
+                    </ul>
+                </div>
+                <div class="info-box" style="border-left-color: #28a745; background-color: #f4fdf6;">
+                    <h3>Muvofiqlikni baholash bo'yicha onlayn xizmatlar</h3>
+                    <p style="margin-bottom: 10px;">Fuqarolar va tadbirkorlik subyektlari uchun mahsulotlarni sertifikatlashtirish bo‘yicha barcha xizmatlar Bojxona axborot tizimi – <strong>“Yagona darcha” TIS</strong> orqali amalga oshiriladi.</p>
+                    <a href="http://singlewindow.uz/?lang=uz_UZ" target="_blank" class="btn btn-outline" style="border-color: #28a745; color: #28a745;">Yagona darcha tizimiga o'tish</a>
+                    <p style="margin-top: 20px; margin-bottom: 10px;">Amaldagi akkreditatsiyadan o‘tgan muvofiqlikni baholash organlari ro‘yxati bilan O‘zbekiston akkreditatsiya markazining rasmiy veb-saytida tanishishingiz mumkin.</p>
+                    <a href="https://akkred.uz" target="_blank" class="btn btn-outline" style="border-color: #28a745; color: #28a745;">akkred.uz veb-saytiga o'tish</a>
+                </div>
+            </div>
+            <!-- Tab 3: Nomuvofiq deb topilgan mahsulotlar -->
+            <div id="tab3" class="tab-content fade-up">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="footer" style="background-color: var(--primary-navy); color: #fff; padding: 40px 0 20px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.5rem;">SINOV SERTIFIQAT SERVIS</h3>
+                <p style="opacity: 0.8; line-height: 1.6;">O‘zbekistonda ishlab chiqarilayotgan va chetdan keltirilayotgan qurilish materiallarining xavfsizlik va sifat standartlariga muvofiqligini sinash.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.2rem;">Bog'lanish</h3>
+                <ul style="list-style: none; padding: 0; opacity: 0.8; line-height: 1.8;">
+                    <li>Xorazm viloyati, Tuproqqal'a tumani</li>
+                    <li>Xalqlar do'stligi ko'chasi, 10/3 uy</li>
+                    <li>+998 88 100 28 69</li>
+                    <li>info@sinovss.uz</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px; font-size: 1.2rem;">Menyu</h3>
+                <ul style="list-style: none; padding: 0; opacity: 0.8; line-height: 1.8;">
+                    <li><a href="index.html" style="color: #fff; text-decoration: none;">Bosh sahifa</a></li>
+                    <li class="dropdown">
+                    <a href="sertifikatlashtirish.html" style="color: white; font-weight: 600; text-transform: uppercase; font-size: 1.05rem; cursor: pointer;">Sertifikatlashtirish</a>
+                    <div class="dropdown-content">
+                        <a href="sertifikatlashtirish.html">Sertifikatlashtirish</a>
+                        <a href="sertifikat-tuzilma.html">Sertifikatlashtirish organi tuzilishi</a>
+                        <a href="akkreditatsiya-hujjatlari.html">Akkreditatsiya hujjatlari</a>
+                    </div>
+                </li>
+                    <li><a href="narxlar.html" style="color: #fff; text-decoration: none;">Xizmat narxlari</a></li>
+                    <li><a href="hujjatlar.html" style="color: #fff; text-decoration: none;">Hujjatlar va Ochiq ma'lumotlar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; opacity: 0.7;">
+            <p>&copy; 2026 www.sinovss.uz. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+    <script src="js/script.js?v=19"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            // Yig'ilgan barcha tab contentlarini yashirish
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            // Barcha tab tugmalaridan active klassini olib tashlash
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            // Tanlangan tabni ko'rsatish va tugmaga active klassini qo'shish
+            document.getElementById(tabName).style.display = "block";
+            // Xavfsizlik uchun kichik kechikish bilan animatsiya klassini qo'shish
+            setTimeout(() => {
+                document.getElementById(tabName).classList.add("active");
+            }, 10);
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
