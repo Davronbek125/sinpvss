@@ -783,7 +783,21 @@ section {
         padding: 40px 30px;
     }
     .main-nav {
-        padding: 5px 0;
+        position: sticky !important;
+        top: 0 !important;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transform: none !important;
+        transition: none !important;
+        padding: 4px 0;
+    }
+    .main-nav.fixed-nav {
+        position: sticky !important;
+        top: 0 !important;
+    }
+    .main-nav.hide-nav {
+        transform: none !important;
     }
     .nav-inner {
         flex-wrap: wrap;
@@ -795,18 +809,18 @@ section {
     }
     .mobile-menu-btn {
         display: block !important;
-        padding: 10px 15px;
+        padding: 8px 15px;
         margin: 0 auto;
         color: #ffffff;
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .nav-links {
         display: none !important;
         width: 100%;
         flex-direction: column;
         text-align: center;
-        gap: 8px;
-        padding: 15px 0 10px;
+        gap: 4px;
+        padding: 10px 0;
     }
     .nav-links.active {
         display: flex !important;
@@ -816,7 +830,9 @@ section {
     }
     .nav-links li a {
         display: block;
-        padding: 8px 12px;
+        padding: 6px 10px;
+        font-size: 0.85rem !important; /* Mobil uchun kichikroq menyu yozuvlari */
+        letter-spacing: 0.3px;
     }
     .dropdown {
         width: 100%;
@@ -829,7 +845,7 @@ section {
         background-color: rgba(255, 255, 255, 0.08) !important;
         border-radius: 6px;
         min-width: 100%;
-        margin: 6px 0;
+        margin: 4px 0;
         animation: none !important;
     }
     .dropdown.active .dropdown-content {
@@ -837,8 +853,8 @@ section {
     }
     .dropdown-content a {
         color: #ffffff !important;
-        padding: 10px 15px !important;
-        font-size: 0.95rem !important;
+        padding: 7px 12px !important;
+        font-size: 0.78rem !important; /* Ichki menyu yozuvlari yanada ixcham */
         border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
         text-align: center;
     }

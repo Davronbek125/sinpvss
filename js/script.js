@@ -231,13 +231,21 @@ clickableNavLinks.forEach(link => {
 
 
 
-// Smart Sticky Nav Logic
+// Smart Sticky Nav Logic (Faqat PC versiya uchun, mobil uchun menyu yuqoriga qadab qo'yilgan)
 let lastScrollTop = 0;
 const nav = document.querySelector('.main-nav');
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
     if (!nav) return;
+    
+    // Mobil qurilmalarda menyu qalqib/yashirinmasdan yuqoriga qadab turadi (PCga tegmaydi)
+    if (window.innerWidth <= 992) {
+        nav.classList.remove('fixed-nav', 'hide-nav');
+        document.body.style.paddingTop = '0px';
+        return;
+    }
+
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     // Height of the white header (approx 140px)
