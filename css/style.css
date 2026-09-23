@@ -833,19 +833,6 @@ section {
         display: block;
         animation: fadeInDown 0.3s ease;
     }
-
-    .dropdown > a::after {
-        content: ' ▾';
-        font-size: 0.75rem;
-        opacity: 0.75;
-        display: inline-block;
-        transition: transform 0.2s ease;
-    }
-
-    .dropdown:hover > a::after {
-        transform: translateY(2px);
-        opacity: 1;
-    }
 }
 
 @keyframes fadeInDown {
