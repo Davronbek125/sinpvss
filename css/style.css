@@ -774,7 +774,94 @@ section {
     font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Scroll Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   Desktop Dropdown Menu (Faqat PC versiya uchun: > 992px)
+   ========================================================================== */
+@media (min-width: 993px) {
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--bg-white);
+        min-width: 280px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        border-radius: 8px;
+        overflow: hidden;
+        top: 100%;
+        left: 0;
+    }
+
+    .dropdown-content a {
+        color: var(--primary-navy) !important;
+        padding: 12px 18px;
+        text-decoration: none;
+        display: block;
+        font-size: 0.92rem !important;
+        text-transform: none !important;
+        border-bottom: 1px solid var(--border-color);
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        background-color: var(--accent-light);
+        color: var(--accent-blue) !important;
+        padding-left: 22px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        animation: fadeInDown 0.3s ease;
+    }
+
+    .dropdown > a::after {
+        content: ' ▾';
+        font-size: 0.75rem;
+        opacity: 0.75;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .dropdown:hover > a::after {
+        transform: translateY(2px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Responsive (Planshet va Mobil versiya: <= 992px)
+   ========================================================================== */
 @media (max-width: 992px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
@@ -782,6 +869,8 @@ section {
     .contact-form-panel {
         padding: 40px 30px;
     }
+
+    /* Mobil navigatsiya paneli — Oq va qora zamonaviy dizayn, yuqoriga qadalgan */
     .main-nav {
         position: sticky !important;
         top: 0 !important;
@@ -790,88 +879,181 @@ section {
         z-index: 1000;
         transform: none !important;
         transition: none !important;
-        padding: 4px 0;
+        padding: 6px 0 !important;
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        border-top: 1px solid #e2e8f0 !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;
     }
-    .main-nav.fixed-nav {
+    .main-nav.fixed-nav,
+    .main-nav.hide-nav {
         position: sticky !important;
         top: 0 !important;
-    }
-    .main-nav.hide-nav {
         transform: none !important;
     }
+    
     .nav-inner {
-        flex-wrap: wrap;
-        padding: 0 15px;
-        justify-content: center;
+        display: flex !important;
+        justify-content: flex-end !important; /* 3ta chiziq o'ng tomonga chetga surildi */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 2px 16px !important;
+        position: relative;
     }
-    .logo img {
-        height: 60px !important;
-    }
+
+    /* 3ta chiziq (Hamburger menyu tugmasi) - O'ng tomonga chetga chiroyli joylashtirildi */
     .mobile-menu-btn {
-        display: block !important;
-        padding: 8px 15px;
-        margin: 0 auto;
-        color: #ffffff;
-        font-size: 1.7rem;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 0 0 auto !important; /* O'ng tomonga chetga surish */
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        color: #0f172a !important; /* Aniq qora / to'q rang */
+        background: #ffffff !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        font-size: 1.6rem !important;
+        line-height: 1 !important;
+        cursor: pointer !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+        transition: all 0.2s ease !important;
+        outline: none !important;
+        -webkit-tap-highlight-color: transparent;
     }
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:active {
+        background: #0f172a !important;
+        color: #ffffff !important;
+        border-color: #0f172a !important;
+    }
+
+    /* Ochiluvchi menyu paneli - Toza oq fon, qora yozuvlar */
     .nav-links {
         display: none !important;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        gap: 4px;
-        padding: 10px 0;
+        width: 100% !important;
+        flex-direction: column !important;
+        text-align: left !important;
+        gap: 0 !important;
+        padding: 6px 0 10px 0 !important;
+        margin: 8px 0 0 0 !important;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border-top: 1px solid #e2e8f0 !important;
+        border-bottom: 2px solid #0f172a !important;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.06) !important;
+        border-radius: 0 0 10px 10px !important;
     }
     .nav-links.active {
         display: flex !important;
     }
+
     .nav-links li {
-        width: 100%;
+        width: 100% !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
+    .nav-links li:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Asosiy menyu linklari - qora yozuv, chapga tekislangan */
     .nav-links li a {
-        display: block;
-        padding: 6px 10px;
-        font-size: 0.85rem !important; /* Mobil uchun kichikroq menyu yozuvlari */
-        letter-spacing: 0.3px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 13px 20px !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+        color: #0f172a !important; /* To'q qora / slate */
+        text-transform: uppercase !important;
+        letter-spacing: 0.4px !important;
+        text-decoration: none !important;
+        background: #ffffff !important;
+        transition: background 0.2s ease, color 0.2s ease !important;
     }
+    .nav-links li a:hover,
+    .nav-links li a:active {
+        background: #f8fafc !important;
+        color: #1f6fe0 !important;
+    }
+    .nav-links a::after {
+        display: none !important; /* PC chizig'ini mobilda yo'qotish */
+    }
+
+    /* Dropdown container */
     .dropdown {
-        width: 100%;
-        text-align: center;
+        width: 100% !important;
+        text-align: left !important;
+        position: static !important;
     }
+
+    /* Dropdown indikator strelkasi - U25BE umuman chiqmaydi! */
+    .dropdown > a::after {
+        content: '▾' !important;
+        font-size: 1.1rem !important;
+        font-weight: bold !important;
+        color: #64748b !important;
+        opacity: 1 !important;
+        display: inline-block !important;
+        transition: transform 0.25s ease !important;
+        margin-left: 8px !important;
+    }
+    .dropdown.active > a::after {
+        transform: rotate(180deg) !important;
+        color: #0f172a !important;
+    }
+
+    /* Ichki menyu (Dropdown Content) - ixcham, ochiq fon, aniq o'qiluvchi qora matn */
     .dropdown-content {
         position: static !important;
         display: none !important;
         box-shadow: none !important;
-        background-color: rgba(255, 255, 255, 0.08) !important;
-        border-radius: 6px;
-        min-width: 100%;
-        margin: 4px 0;
+        background-color: #f8fafc !important;
+        background: #f8fafc !important;
+        border-radius: 0 !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 4px 0 !important;
+        border-top: 1px solid #edf2f7 !important;
+        border-bottom: 1px solid #edf2f7 !important;
+        border-left: 3.5px solid #0f172a !important;
         animation: none !important;
     }
     .dropdown.active .dropdown-content {
         display: block !important;
     }
+
     .dropdown-content a {
-        color: #ffffff !important;
-        padding: 7px 12px !important;
-        font-size: 0.78rem !important; /* Ichki menyu yozuvlari yanada ixcham */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-        text-align: center;
+        display: block !important;
+        color: #334155 !important; /* O'qilishi oson to'q rang */
+        padding: 11px 20px 11px 32px !important; /* Ichkariga tekislangan */
+        font-size: 0.84rem !important;
+        font-weight: 500 !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+        border-bottom: 1px solid #edf2f7 !important;
+        text-align: left !important;
+        background: transparent !important;
+        transition: all 0.2s ease !important;
+    }
+    .dropdown-content a:hover,
+    .dropdown-content a:active {
+        background-color: #e2e8f0 !important;
+        color: #0f172a !important;
+        font-weight: 600 !important;
     }
     .dropdown-content a:last-child {
         border-bottom: none !important;
     }
-    .dropdown-content a:hover {
-        background-color: rgba(255, 255, 255, 0.15) !important;
-    }
+
     .nav-btn {
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-    .nav-btn.active {
-        display: block;
+        display: none !important;
     }
     .top-bar-inner {
         flex-direction: column;
@@ -883,47 +1065,61 @@ section {
 }
 
 @media (max-width: 768px) {
+    .header-top {
+        padding: 10px 15px !important;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .header-top .logo img {
+        height: 52px !important;
+        max-width: 150px !important;
+        object-fit: contain;
+    }
     .top-info {
         display: none;
     }
     .top-right-info {
-        align-items: center !important;
-        text-align: center;
-        width: 100%;
-        margin-top: 15px;
+        align-items: flex-end !important;
+        text-align: right;
     }
     .top-right-info > div {
-        font-size: 1.05rem !important;
+        font-size: 0.95rem !important;
     }
     .top-right-info .top-lang {
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
+        font-size: 1rem !important;
     }
     .hero-slider {
         height: 420px;
     }
     .hero-slider[style*="height: 300px"],
-    .hero-slider[style*="height:300px"] {
+    .hero-slider[style*="height:300px"],
+    section.hero-slider {
         height: 220px !important;
     }
     .hero-slider[style*="height: 300px"] .slide,
-    .hero-slider[style*="height:300px"] .slide {
+    .hero-slider[style*="height:300px"] .slide,
+    section.hero-slider .slide {
         height: 220px !important;
     }
     .hero-slider[style*="height: 300px"] .slide-content,
-    .hero-slider[style*="height:300px"] .slide-content {
+    .hero-slider[style*="height:300px"] .slide-content,
+    section.hero-slider .slide-content {
         top: 50% !important;
     }
     .hero-slider[style*="height: 300px"] h1,
-    .hero-slider[style*="height:300px"] h1 {
+    .hero-slider[style*="height:300px"] h1,
+    section.hero-slider h1 {
         font-size: 1.45rem !important;
         line-height: 1.3 !important;
     }
     .hero-slider[style*="height: 300px"] p,
-    .hero-slider[style*="height:300px"] p {
+    .hero-slider[style*="height:300px"] p,
+    section.hero-slider p {
         font-size: 0.9rem !important;
     }
     .slide-content h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.7rem !important;
         word-wrap: break-word;
         line-height: 1.3;
     }
@@ -984,15 +1180,28 @@ section {
 }
 
 @media (max-width: 480px) {
+    .header-top {
+        padding: 8px 12px !important;
+    }
+    .header-top .logo img {
+        height: 42px !important;
+        max-width: 125px !important;
+    }
+    .top-right-info > div {
+        font-size: 0.8rem !important;
+    }
+    .top-right-info .top-lang {
+        font-size: 0.9rem !important;
+    }
     .slide-content h1 {
-        font-size: 1.4rem !important;
+        font-size: 1.35rem !important;
         word-wrap: break-word;
         line-height: 1.3;
     }
     .nav-links li {
         width: 100%;
-        padding: 4px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 0;
+        border-bottom: 1px solid #f1f5f9;
     }
     .nav-links li:last-child {
         border-bottom: none;
@@ -1009,7 +1218,7 @@ section {
         align-items: center;
     }
     .logo img {
-        height: 50px !important;
+        height: 48px !important;
     }
     .tab-btn {
         width: 100%;
@@ -1028,79 +1237,4 @@ section {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-}
-/* Scroll Animations */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--bg-white);
-    min-width: 280px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    z-index: 1000;
-    border-radius: 8px;
-    overflow: hidden;
-    top: 100%;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: var(--primary-navy) !important;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.95rem !important;
-    text-transform: none !important;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--accent-light);
-    color: var(--accent-blue) !important;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    animation: fadeInDown 0.3s ease;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hover Triangle */
-.dropdown > a::after {
-    content: ' \u25BE'; /* Unicode for black down-pointing small triangle */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.dropdown:hover > a::after {
-    opacity: 1;
 }
