@@ -869,6 +869,74 @@ section {
 }
 
 /* ==========================================================================
+   Xizmat narxlari kartalari (Pricing Cards Side-by-Side)
+   ========================================================================== */
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.price-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(10, 42, 86, 0.12);
+}
+
+.price-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-img-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #edf2f7;
+}
+
+.price-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.price-img-wrap:hover img {
+    transform: scale(1.03);
+}
+
+.shop-standard-btn {
+    transition: all 0.3s ease;
+}
+
+.shop-standard-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 69, 204, 0.45);
+}
+
+/* ==========================================================================
    Desktop Dropdown Menu (Faqat PC versiya uchun: > 992px)
    ========================================================================== */
 @media (min-width: 993px) {
@@ -1449,6 +1517,26 @@ section {
         width: 42px !important;
         height: 42px !important;
         font-size: 1.5rem !important;
+    }
+
+    /* Narxlar kartalari mobilda */
+    .price-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .price-card {
+        padding: 20px 16px !important;
+    }
+    .price-card h3 {
+        font-size: 1.15rem !important;
+        min-height: auto !important;
+        margin-bottom: 15px !important;
+    }
+    .shop-standard-btn {
+        width: 100% !important;
+        max-width: 380px !important;
+        padding: 14px 20px !important;
+        font-size: 1.1rem !important;
     }
 
     /* Ichki sahifalardagi katta shriftli matnlar moslashuvi */
