@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xizmat narxlari - SINOV SERTIFIQAT SERVIS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=22">
+    <link rel="stylesheet" href="css/style.css?v=24">
+    <style>
+        .price-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 25px !important;
+            align-items: stretch !important;
+            margin-top: 10px !important;
+            margin-bottom: 40px !important;
+        }
+        .price-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .price-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -66,14 +93,7 @@
     <!-- Services and Prices -->
     <section class="container" style="padding: 60px 0;">
 
-        <!-- Standart xarid qilish tugmasi -->
-        <div class="fade-up" style="text-align: center; margin-bottom: 45px;">
-            <a href="https://uzsti.uz/shop" target="_blank" class="btn btn-primary shop-standard-btn" style="background-color: #0245cc; padding: 16px 45px; font-size: 1.25rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; text-decoration: none; color: #fff; box-shadow: 0 6px 20px rgba(2, 69, 204, 0.35);">
-                <span style="font-size: 1.35rem;">🛒</span>
-                <span>Standart xarid qilish</span>
-            </a>
-        </div>
-
+        <!-- 3 ta xizmat narxlari kartalari (Yonma-yon) -->
         <div class="price-grid fade-up">
             <div class="price-card">
                 <div>
@@ -116,6 +136,14 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Standart xarid qilish tugmasi (Rasmlar ostida) -->
+        <div class="fade-up" style="text-align: center; margin-top: 45px; margin-bottom: 20px;">
+            <a href="https://uzsti.uz/shop" target="_blank" class="btn btn-primary shop-standard-btn" style="background-color: #0245cc; padding: 16px 45px; font-size: 1.25rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; text-decoration: none; color: #fff; box-shadow: 0 6px 20px rgba(2, 69, 204, 0.35);">
+                <span style="font-size: 1.35rem;">🛒</span>
+                <span>Standart xarid qilish</span>
+            </a>
         </div>
     </section>
     <!-- Team Section -->
