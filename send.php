@@ -11,11 +11,11 @@ header('Content-Type: application/json; charset=utf-8');
 // =========================================================================
 
 // BotFather bergan bot tokenini shu yerga yozing:
-$botToken = 'YOUR_BOT_TOKEN_HERE';
+$botToken = '8762355210:AAEkU1XXw_mPDaUaAwLX36_qDZ8be2k-b4M';
 
 // Xabarlar borishi kerak bo'lgan Telegram guruh yoki kanal Chat ID sini yozing:
 // (Guruh ID lari odatda -100 bilan boshlanadi, masalan: '-1001234567890')
-$chatId = 'YOUR_CHAT_ID_HERE';
+$chatId = '-1004301229429';
 
 // Buyurtma nusxasi boradigan elektron pochta manzili:
 $adminEmail = 'elyormadirimov@gmail.com';
