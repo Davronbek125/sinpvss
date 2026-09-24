@@ -102,6 +102,51 @@
             color: var(--accent-blue) !important;
             text-decoration: underline !important;
         }
+        .lex-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background-color: #0245cc;
+            color: #ffffff !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(2, 69, 204, 0.25);
+            white-space: nowrap;
+        }
+        .lex-badge:hover {
+            background-color: #013299 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 69, 204, 0.35);
+        }
+        .psk-item {
+            margin-bottom: 14px;
+            padding: 12px 16px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        .psk-item:hover {
+            border-color: #0245cc;
+            box-shadow: 0 3px 12px rgba(2, 69, 204, 0.08);
+        }
+        .psk-link {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            flex: 1;
+            transition: color 0.2s;
+        }
+        .psk-link:hover {
+            color: #0245cc;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -183,16 +228,86 @@
                     <li><a href="https://lex.uz/uz/docs/-6392312" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasining “Texnik jihatdan tartibga solish to‘g‘risida”gi (O‘RQ-819) Qonuni</a></li>
                     <li><a href="https://lex.uz/docs/-4476578" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">O‘zbekiston Respublikasi Prezidentining qarori, 15.08.2019 yildagi PQ-4419-son «O‘zbekiston respublikasida muvofiqlikni baholash tizimini yanada takomillashtirish va sinov laboratoriyalari kompleksini rivojlantirish» to‘g‘risida</a></li>
                 </ul>
-                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue);">MIJOZNING HUQUQ VA MAJBURIYATLARI (PSK-14)</h3>
-                <div class="info-box">
-                    <ol style="padding-left: 20px; line-height: 1.8;">
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-7080176" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatni qo'llash va muvofiqlik belgisidan foydalanish to'g'risidagi shartnomaga muvofiq bir martalik to'lovni amalga oshirish <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatlangan ommaviy ishlab chiqarilgan mahsulotlarni muvofiqlik belgisi bilan o'z xavfingiz ostida belgilang <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/en/docs/-99882" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatlashtirish organiga sertifikatlangan mahsulotlarning ishlab chiqarish sharoitlari va sifatini me'yoriy hujjatlar talablariga muvofiqligini tekshirish imkoniyatini berish <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatlash paytida tasdiqlangan mahsulot xususiyatlariga ta'sir qilishi mumkin bo'lgan mahsulot dizayni yoki ishlab chiqarish texnologiyasidagi rejalashtirilgan o'zgarishlar haqida sertifikatlashtirish organiga 5 kalendar kun ichida xabar bering <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Tekshirish nazorati amalga oshirilishini ta'minlash va tegishli xarajatlarni qoplash <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatlangan mahsulotlarni reklama qilish va sotish uchun yillik sertifikatlar berish <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Sertifikatlangan mahsulotlar uchun normativ hujjat talablariga javob berish uchun ishlab chiqarilgan mahsulotlarni o'z vaqtida sinovdan o'tkazish <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
+                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue); font-size: 1.4rem;">MIJOZNING HUQUQ VA MAJBURIYATLARI (PSK-14)</h3>
+                <div class="info-box" style="padding: 24px; background: #f8fafc; border-left: 4px solid var(--accent-blue);">
+                    <ol style="padding-left: 20px; margin: 0;">
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-7080176" target="_blank" class="psk-link">
+                                    Sertifikatni qo'llash va muvofiqlik belgisidan foydalanish to'g'risidagi shartnomaga muvofiq bir martalik to'lovni amalga oshirish
+                                </a>
+                                <a href="https://lex.uz/docs/-7080176" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="psk-link">
+                                    Sertifikatlangan ommaviy ishlab chiqarilgan mahsulotlarni muvofiqlik belgisi bilan o'z xavfingiz ostida belgilang
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/en/docs/-99882" target="_blank" class="psk-link">
+                                    Sertifikatlashtirish organiga sertifikatlangan mahsulotlarning ishlab chiqarish sharoitlari va sifatini me'yoriy hujjatlar talablariga muvofiqligini tekshirish imkoniyatini berish
+                                </a>
+                                <a href="https://lex.uz/en/docs/-99882" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="psk-link">
+                                    Sertifikatlash paytida tasdiqlangan mahsulot xususiyatlariga ta'sir qilishi mumkin bo'lgan mahsulot dizayni yoki ishlab chiqarish texnologiyasidagi rejalashtirilgan o'zgarishlar haqida sertifikatlashtirish organiga 5 kalendar kun ichida xabar bering
+                                </a>
+                                <a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="psk-link">
+                                    Tekshirish nazorati amalga oshirilishini ta'minlash va tegishli xarajatlarni qoplash
+                                </a>
+                                <a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="psk-link">
+                                    Sertifikatlangan mahsulotlarni reklama qilish va sotish uchun yillik sertifikatlar berish
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item" style="margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="psk-link">
+                                    Sertifikatlangan mahsulotlar uchun normativ hujjat talablariga javob berish uchun ishlab chiqarilgan mahsulotlarni o'z vaqtida sinovdan o'tkazish
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-badge">
+                                    <span>Lex.uz da ko'rish</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
                     </ol>
                 </div>
             </div>

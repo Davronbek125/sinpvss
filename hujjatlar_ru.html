@@ -86,6 +86,51 @@
             color: var(--accent-blue) !important;
             text-decoration: underline !important;
         }
+        .lex-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background-color: #0245cc;
+            color: #ffffff !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(2, 69, 204, 0.25);
+            white-space: nowrap;
+        }
+        .lex-badge:hover {
+            background-color: #013299 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 69, 204, 0.35);
+        }
+        .psk-item {
+            margin-bottom: 14px;
+            padding: 12px 16px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        .psk-item:hover {
+            border-color: #0245cc;
+            box-shadow: 0 3px 12px rgba(2, 69, 204, 0.08);
+        }
+        .psk-link {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            flex: 1;
+            transition: color 0.2s;
+        }
+        .psk-link:hover {
+            color: #0245cc;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -173,16 +218,86 @@
                     <li><a href="https://lex.uz/ru/docs/-6392312" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Закон Республики Узбекистан «О техническом регулировании» (ЗРУ-819)</a></li>
                     <li><a href="https://lex.uz/ru/docs/-4476578" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: block; padding: 5px 0;">Постановление Президента Республики Узбекистан от 15 августа 2019 года № ПП-4419 «О дальнейшем совершенствовании системы оценки соответствия и развитии комплекса испытательных лабораторий в Республике Узбекистан»</a></li>
                 </ul>
-                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue);">ПРАВА И ОБЯЗАННОСТИ КЛИЕНТА (ПСК-14)</h3>
-                <div class="info-box">
-                    <ol style="padding-left: 20px; line-height: 1.8;">
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-7080176" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Производить единовременную оплату в соответствии с соглашением о применении сертификата и использовании знака соответствия <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Маркировать сертифицированную серийно выпускаемую продукцию знаком соответствия под свою ответственность <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/en/docs/-99882" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Предоставлять органу по сертификации возможность проверки условий производства и качества сертифицированной продукции на соответствие требованиям нормативных документов <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Извещать орган по сертификации в течение 5 календарных дней о планируемых изменениях в конструкции продукции или технологии производства, которые могут повлиять на характеристики продукции, подтвержденные при сертификации <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Обеспечивать проведение инспекционного контроля и оплачивать связанные с ним расходы <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Предоставлять ежегодные сертификаты по рекламе и реализации сертифицированной продукции <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-link" style="color: inherit; text-decoration: none; display: inline-block;">Своевременно проводить испытания выпускаемой продукции для выполнения требований нормативного документа на сертифицируемую продукцию <span style="color: #0245cc; font-size: 0.9em; font-weight: 600; white-space: nowrap;">(lex.uz &#8599;)</span></a></li>
+                <h3 style="margin-top: 40px; margin-bottom: 20px; color: var(--accent-blue); font-size: 1.4rem;">ПРАВА И ОБЯЗАННОСТИ КЛИЕНТА (ПСК-14)</h3>
+                <div class="info-box" style="padding: 24px; background: #f8fafc; border-left: 4px solid var(--accent-blue);">
+                    <ol style="padding-left: 20px; margin: 0;">
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-7080176" target="_blank" class="psk-link">
+                                    Производить единовременную оплату в соответствии с соглашением о применении сертификата и использовании знака соответствия
+                                </a>
+                                <a href="https://lex.uz/docs/-7080176" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="psk-link">
+                                    Маркировать сертифицированную серийно выпускаемую продукцию знаком соответствия под свою ответственность
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-683169?ONDATE=05.02.2020" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/en/docs/-99882" target="_blank" class="psk-link">
+                                    Предоставлять органу по сертификации возможность проверки условий производства и качества сертифицированной продукции на соответствие требованиям нормативных документов
+                                </a>
+                                <a href="https://lex.uz/en/docs/-99882" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="psk-link">
+                                    Извещать орган по сертификации в течение 5 календарных дней о планируемых изменениях в конструкции продукции или технологии производства, которые могут повлиять на характеристики продукции, подтвержденные при сертификации
+                                </a>
+                                <a href="https://lex.uz/docs/-683169?ONDATE=07.12.2017" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="psk-link">
+                                    Обеспечивать проведение инспекционного контроля и оплачивать связанные с ним расходы
+                                </a>
+                                <a href="https://lex.uz/docs/-3738081?ONDATE=06.08.2022" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="psk-link">
+                                    Предоставлять ежегодные сертификаты по рекламе и реализации сертифицированной продукции
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="psk-item" style="margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="psk-link">
+                                    Своевременно проводить испытания выпускаемой продукции для выполнения требований нормативного документа на сертифицируемую продукцию
+                                </a>
+                                <a href="https://lex.uz/uz/docs/-7080176?ONDATE=02.09.2025" target="_blank" class="lex-badge">
+                                    <span>Смотреть на Lex.uz</span>
+                                    <span>&#8599;</span>
+                                </a>
+                            </div>
+                        </li>
                     </ol>
                 </div>
             </div>
