@@ -168,14 +168,18 @@ function sendToTelegram(e) {
         method: 'POST',
         body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Server javob bermadi');
+    .then(async response => {
+        let data = {};
+        try {
+            data = await response.json();
+        } catch (e) {}
+        if (response.ok || data.success || data.telegram) {
+            return data;
         }
-        return response.json();
+        throw new Error(data.message || 'Server javob bermadi');
     })
     .then(data => {
-        if (data.success) {
+        if (data.success || data.telegram) {
             if (statusDiv) {
                 statusDiv.innerHTML = isRu 
                     ? "✓ Ваша заявка успешно отправлена! Скоро мы свяжемся с вами." 
