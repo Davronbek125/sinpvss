@@ -123,67 +123,86 @@ function closeLightbox() {
     }
 }
 
-// Telegram Integration
+// Contact Form Submission (Telegram & Email via send.php)
 function sendToTelegram(e) {
     e.preventDefault();
-    
-    // Replace these placeholders with your actual Bot Token and Chat ID
-    const botToken = '<BOT_TOKEN>';
-    const chatId = '<CHAT_ID>';
     
     const nameEl = document.getElementById('name');
     const phoneEl = document.getElementById('phone');
     const serviceEl = document.getElementById('service');
     const messageEl = document.getElementById('message');
     const statusDiv = document.getElementById('formStatus');
+    const submitBtn = e.target.querySelector('button[type="submit"]');
     
-    const name = nameEl ? nameEl.value : '';
-    const phone = phoneEl ? phoneEl.value : '';
-    const service = serviceEl ? serviceEl.value : '';
-    const message = messageEl ? messageEl.value : '';
+    const isRu = window.location.pathname.includes('_ru');
     
-    const currentTime = new Date().toLocaleString();
+    const name = nameEl ? nameEl.value.trim() : '';
+    const phone = phoneEl ? phoneEl.value.trim() : '';
+    const service = serviceEl ? serviceEl.value.trim() : '';
+    const message = messageEl ? messageEl.value.trim() : '';
     
-    const text = `🔔 YANGI ARIZA (sinovss.uz):\n━━━━━━━━━━━━━━━━━━━━\n👤 Buyurtmachi: ${name}\n📞 Telefon: ${phone}\n🏗 Xizmat turi: ${service}\n📝 Izoh: ${message}\n📅 Vaqt: ${currentTime}`;
-    
-    if (statusDiv) {
-        statusDiv.innerHTML = "Yuborilmoqda...";
-        statusDiv.style.color = "var(--primary-navy)";
-    }
-    
-    if(botToken === '<BOT_TOKEN>') {
+    if (!name || !phone) {
         if (statusDiv) {
-            statusDiv.innerHTML = "Xatolik: Telegram bot ulanganicha yo'q. (Placeholder o'zgartirilmagan)";
-            statusDiv.style.color = "red";
+            statusDiv.innerHTML = isRu ? "Пожалуйста, заполните обязательные поля!" : "Iltimos, ism va telefon raqamingizni kiriting!";
+            statusDiv.style.color = "#dc2626";
         }
         return;
     }
-
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-
-    fetch(url)
-        .then(response => {
-            if(response.ok) {
-                if (statusDiv) {
-                    statusDiv.innerHTML = "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.";
-                    statusDiv.style.color = "green";
-                }
-                const form = document.getElementById('tgForm');
-                if (form) form.reset();
-            } else {
-                if (statusDiv) {
-                    statusDiv.innerHTML = "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.";
-                    statusDiv.style.color = "red";
-                }
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+    
+    if (statusDiv) {
+        statusDiv.innerHTML = isRu ? "Отправка заявки..." : "Arizangiz yuborilmoqda...";
+        statusDiv.style.color = "#0245cc";
+    }
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.7";
+    }
+    
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('phone', phone);
+    formData.append('service', service);
+    formData.append('message', message);
+    
+    fetch('send.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Server javob bermadi');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
             if (statusDiv) {
-                statusDiv.innerHTML = "Xatolik yuz berdi. Internet ulanishini tekshiring.";
-                statusDiv.style.color = "red";
+                statusDiv.innerHTML = isRu 
+                    ? "✓ Ваша заявка успешно отправлена! Скоро мы свяжемся с вами." 
+                    : "✓ Arizangiz muvaffaqiyatli qabul qilindi! Tez orada mutaxassislarimiz siz bilan bog'lanishadi.";
+                statusDiv.style.color = "#16a34a";
             }
-        });
+            const form = document.getElementById('tgForm');
+            if (form) form.reset();
+        } else {
+            throw new Error(data.message || 'Xatolik yuz berdi');
+        }
+    })
+    .catch(error => {
+        console.error('Send error:', error);
+        if (statusDiv) {
+            statusDiv.innerHTML = isRu 
+                ? "Произошла ошибка при отправке. Пожалуйста, позвоните нам напрямую." 
+                : "Xatolik yuz berdi. Iltimos, bizga to'g'ridan-to'g'ri telefon orqali bog'laning.";
+            statusDiv.style.color = "#dc2626";
+        }
+    })
+    .finally(() => {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        }
+    });
 }
 
 
