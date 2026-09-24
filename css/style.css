@@ -1237,8 +1237,145 @@ section {
 
     /* PDF iframe konteyneri mobilda ixchamlashtiriladi */
     div[style*="height: 1100px"],
-    div:has(> iframe[src*=".pdf"]) {
-        height: 460px !important;
+    div[style*="height:1100px"],
+    div:has(> iframe),
+    iframe[src*=".pdf"] {
+        height: 480px !important;
+        max-height: 70vh !important;
+    }
+
+    /* Tabs va hujjatlar ro'yxati mobil moslashuvi */
+    .tabs {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 20px !important;
+    }
+    .tab-btn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px 14px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+        border-radius: 6px !important;
+        white-space: normal !important;
+        border: 1px solid var(--border-color) !important;
+        box-sizing: border-box !important;
+    }
+    .tab-btn.active {
+        background: var(--primary-navy) !important;
+        color: #ffffff !important;
+        border-color: var(--primary-navy) !important;
+    }
+    .tab-content {
+        padding: 20px 14px !important;
+        border-radius: 8px !important;
+    }
+    .tab-content h2 {
+        font-size: 1.35rem !important;
+        margin-bottom: 16px !important;
+    }
+    .tab-content h3 {
+        font-size: 1.15rem !important;
+        margin-top: 25px !important;
+        margin-bottom: 15px !important;
+    }
+    .doc-list li {
+        padding: 14px 12px !important;
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 12px !important;
+        word-break: break-word !important;
+    }
+    .doc-list li a, .lex-link, .psk-text-link {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        word-break: break-word !important;
+    }
+    .info-box {
+        padding: 18px 14px !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px !important;
+        border-radius: 6px !important;
+    }
+    .info-box h3 {
+        font-size: 1.12rem !important;
+        margin-bottom: 12px !important;
+    }
+    .info-box p {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+    }
+    .info-box ol, .info-box ul {
+        padding-left: 18px !important;
+    }
+    .info-box li {
+        margin-bottom: 10px !important;
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        word-break: break-word !important;
+    }
+
+    /* Buyurtma berish (Tris.uz) tugmasi */
+    a[href*="tris.uz"] {
+        width: 100% !important;
+        max-width: 380px !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        padding: 16px 24px !important;
+        font-size: 1.15rem !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        border-radius: 10px !important;
+    }
+
+    /* Barcha PDF va yuklab olish tugmalari */
+    a[href*=".pdf"],
+    a[download] {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        text-align: center !important;
+        padding: 12px 16px !important;
+        font-size: 0.92rem !important;
+        word-break: break-word !important;
+    }
+
+    /* Ichki sahifalardagi katta shriftli matnlar moslashuvi */
+    p[style*="font-size: 1.25rem"],
+    p[style*="font-size: 1.05rem"] {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+    }
+    ul[style*="font-size: 1.25rem"],
+    ul[style*="font-size: 1.05rem"] {
+        font-size: 0.92rem !important;
+        line-height: 1.7 !important;
+        padding-left: 5px !important;
+    }
+    ul[style*="font-size: 1.25rem"] li,
+    ul[style*="font-size: 1.05rem"] li {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 8px !important;
+    }
+    h3[style*="font-size: 1.8rem"] {
+        font-size: 1.15rem !important;
+        line-height: 1.35 !important;
+        margin: 25px 0 15px 0 !important;
+    }
+    h4[style*="font-size: 1.2rem"] {
+        font-size: 1.05rem !important;
+        line-height: 1.35 !important;
     }
 
     /* Mutaxassislar (Jamoa kartalari) */
@@ -1258,10 +1395,6 @@ section {
         font-size: 0.88rem !important;
     }
 
-    .tab-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
     .contact-info-panel {
         padding: 30px 20px;
     }
@@ -1360,5 +1493,33 @@ section {
     }
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+    div[style*="height: 1100px"],
+    div[style*="height:1100px"],
+    div:has(> iframe),
+    iframe[src*=".pdf"] {
+        height: 380px !important;
+        max-height: 65vh !important;
+    }
+    .slide-content h1 {
+        font-size: 1.25rem !important;
+    }
+    .tab-btn {
+        padding: 10px 12px !important;
+        font-size: 0.88rem !important;
+    }
+    .doc-list li {
+        padding: 12px 10px !important;
+        font-size: 0.88rem !important;
+    }
+    .doc-list li a, .lex-link, .psk-text-link {
+        font-size: 0.88rem !important;
+    }
+    .info-box {
+        padding: 14px 12px !important;
+        font-size: 0.88rem !important;
+    }
+    .info-box li {
+        font-size: 0.88rem !important;
     }
 }

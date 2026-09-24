@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Документы и Открытые данные - SINOV SERTIFIQAT SERVIS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=22">
+    <link rel="stylesheet" href="css/style.css?v=23">
     <style>
         .tabs-container {
             margin-top: 30px;
@@ -90,10 +90,91 @@
             color: #0245cc;
             text-decoration: none;
             transition: color 0.2s, text-decoration 0.2s;
+            word-break: break-word;
         }
         .psk-text-link:hover {
             color: #012b80;
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .tabs-container {
+                margin-top: 20px;
+            }
+            .tabs {
+                flex-direction: column !important;
+                gap: 8px !important;
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+                margin-bottom: 20px !important;
+            }
+            .tab-btn {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 12px 14px !important;
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                border: 1px solid var(--border-color) !important;
+                border-radius: 6px !important;
+            }
+            .tab-btn.active {
+                background: var(--primary-navy) !important;
+                color: #fff !important;
+                border-color: var(--primary-navy) !important;
+            }
+            .tab-content {
+                padding: 20px 14px !important;
+                border-radius: 8px !important;
+            }
+            .tab-content h2 {
+                font-size: 1.35rem !important;
+                margin-bottom: 16px !important;
+            }
+            .tab-content h3 {
+                font-size: 1.15rem !important;
+                margin-top: 25px !important;
+                margin-bottom: 15px !important;
+            }
+            .doc-list li {
+                padding-left: 26px !important;
+                font-size: 0.92rem !important;
+                line-height: 1.55 !important;
+                margin-bottom: 12px !important;
+                word-break: break-word !important;
+            }
+            .doc-list li a, .lex-link {
+                font-size: 0.92rem !important;
+                line-height: 1.55 !important;
+                word-break: break-word !important;
+            }
+            .info-box {
+                padding: 18px 14px !important;
+                font-size: 0.92rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 20px !important;
+                border-radius: 6px !important;
+            }
+            .info-box h3 {
+                font-size: 1.12rem !important;
+                margin-bottom: 12px !important;
+            }
+            .info-box p {
+                font-size: 0.92rem !important;
+                line-height: 1.6 !important;
+            }
+            .info-box ol, .info-box ul {
+                padding-left: 18px !important;
+            }
+            .info-box li {
+                margin-bottom: 10px !important;
+                font-size: 0.92rem !important;
+                line-height: 1.55 !important;
+                word-break: break-word !important;
+            }
+            .psk-text-link {
+                font-size: 0.92rem !important;
+                line-height: 1.55 !important;
+                word-break: break-word !important;
+            }
         }
     </style>
 </head>
