@@ -127,6 +127,28 @@ section {
     z-index: 1000;
 }
 
+/* Header Top-bar (Logo & Contact info background) */
+.header-top-bar {
+    background-color: #f4f8fd;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.88), rgba(244, 248, 253, 0.82)), url('../img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 16px 0;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid rgba(2, 69, 204, 0.1);
+}
+
+.header-top-bar .logo img {
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.header-top-bar .logo img:hover {
+    transform: scale(1.02);
+}
+
 /* Top-bar */
 .top-bar-wrapper {
     background-color: var(--bg-white);
